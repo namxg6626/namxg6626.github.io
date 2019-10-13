@@ -1,7 +1,9 @@
 .container {
     margin: 0 auto;
     width: 1300px;
-    height: auto
+    height: auto;
+    background: grey;
+    padding: 10px
 }
 .container > * {
     margin: 0 0 5px 0;
@@ -9,6 +11,7 @@
 .header {
     height: 50px;
     background: plum;
+    border: 1px solid white
 }
 .content {
     height: auto;
@@ -23,7 +26,8 @@
     height: 200px;
     width: 100%;
     background: lightgreen;
-    margin: 0 0 5px 0
+    margin: 0 0 5px 0;
+    border: 1px solid white
 }
 .content-left {
     width: 100%;
@@ -38,6 +42,7 @@
     background: red;
     height: 100px;
     margin: 0 0 5px 0;
+    border: 1px solid white
 }
 .content-left-1-row ~ .content-left-1-row {
     background: orange;
@@ -47,7 +52,8 @@
     height: auto;
     width: 49.5%;
     margin: 0 0 0 0.5%;
-    background: purple
+    background: purple;
+    border: 1px solid white
 }
 .right {
     width: 40.5%;
@@ -61,17 +67,20 @@
     height: 50px;
     background: purple;
     width: 89%;
-    margin: 0 1% 0 0
+    margin: 0 1% 0 0;
+    border: 1px solid white
 }
 .right-row1-col2 {
     height: auto;
     background: green;
-    width: 10%
+    width: 10%;
+    border: 1px solid white
 }
 .right-row2 {
     background: yellow;
     margin: 0 0 5px 0;
-    height: 100px
+    height: 100px;
+    border: 1px solid white
 }
 .right-row3 {
     display: flex;
@@ -82,16 +91,19 @@
 .right-row3-col {
     height: 100%;
     width: 33%;
-    background: grey
+    background-color: cornflowerblue;
+    border: 1px solid white
 }
 .right-row3-col ~ .right-row3-col {
     margin: 0 0 0 0.5%
 }
 .right-row4 {
     height: 40px;
-    background: peru
+    background: peru;
+    border: 1px solid white
 }
 .footer {
     background: black;
-    height: 50px
+    height: 50px;
+    border: 1px solid white
 }
