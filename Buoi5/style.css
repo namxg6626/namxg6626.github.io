@@ -68,8 +68,8 @@ body {
     padding: 2% !important
 }
 .col2-row2 > .box {
-    height: 200px !important;
-    padding: 2% !important
+    height: auto !important;
+    padding: 30px 2% 30px 2% !important
 }
 .footer {
     background: rgb(255, 255, 255, 0.3);
