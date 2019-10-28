@@ -4,7 +4,7 @@ body {
 .container {
     width: 1200px;
     margin: 0 auto;
-    background: rgb(128, 128, 128, 0.4);
+    background: rgba(128, 128, 128, 0.4);
     padding: 10px
 }
 .container > * ~ * {
@@ -24,7 +24,7 @@ body {
     flex-direction: row;
 }
 .link > a {
-    display: inline-block;
+    display: block;
     margin: 10px;
     color: white;
     text-decoration: none;
@@ -53,7 +53,7 @@ a ~ a {
 }
 .box {
     padding: 1%;
-    background: rgb(128, 128, 128, 0.4);
+    background: rgba(128, 128, 128, 0.4);
     height: 150px
 }
 .col2 {
@@ -75,7 +75,7 @@ a ~ a {
     padding: 30px 2% 30px 2% !important
 }
 .footer {
-    background: rgb(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.3);
     padding: 20px;
     text-align: center
 }
