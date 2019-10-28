@@ -20,15 +20,18 @@ body {
 }
 .link {
     background: black;
-    display: flex;
+    overflow: hidden;
     flex-direction: row;
 }
 .link > a {
-    display: block;
+    display: inline-block;
     margin: 10px;
     color: white;
     text-decoration: none;
     float: right
+}
+a ~ a {
+    float: left !important
 }
 .content {
     display: flex;
