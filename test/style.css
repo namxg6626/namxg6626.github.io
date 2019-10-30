@@ -1,0 +1,100 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0
+}
+.nav {
+    display: block;
+    background: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 10px 0 10px 0;
+    box-shadow: 0 7px 5px 3px rgba(128, 128, 128, 0.5);
+}
+.nav > a {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    margin: 0 10px 0 0;
+    float: right
+}
+a > i {
+    margin: 0 5px 0 0
+}
+a:hover {
+    background: rgba(128, 128, 128, 0.4)
+}
+.container {
+    margin: 0 auto;
+    width: 1250px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.banner {
+    background-image: url("https://i.imgur.com/LPPgQNl.jpg");
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+    position: unset;
+    z-index: 0;
+    position: sticky;
+    top: 50px
+}
+.content {
+    position: relative;
+    padding: 120px 50px 50px 50px;
+    background: white
+}
+.avatar {
+    position: absolute;
+    /* background-image: url("../image/6928351-hawkeyeronin.jpg"); */
+    height: 200px;
+    width: 100%;
+    top: -100px;
+    left: 524px
+}
+.avatar > img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px white solid
+}
+.row1-col1 {
+    display: flex
+}
+.row1-col1 > img {
+    width: 45%;
+    margin: 0 5% 0 0
+}
+.para {
+    margin: 0;
+    display: block;
+    height: 100%;
+    width: 50%;
+    text-align: center
+}
+.row2-col1 {
+    margin: 30px 0 0 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.row2-col1 > img {
+    width: 45%;
+    margin: 0 0 0 5%
+}
+.footer {
+    padding: 20px;
+    background: black;
+}
+.footer > h1 {
+    margin: 0;
+    color: white;
+    text-align: center
+}
+h1 > span {
+    color: orange
+}
