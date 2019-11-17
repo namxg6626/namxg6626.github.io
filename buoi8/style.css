@@ -1,0 +1,187 @@
+body {
+    margin: 0
+}
+.container {
+    background: #f1f1f1;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+.body {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}
+.header {
+    padding: 50px 0;
+    text-align: center;
+}
+.header p {
+    text-transform: uppercase;
+    font-size: 40px;
+    margin: 0px 0px 10px 0;
+}
+.header > span {
+    display: block;
+}
+.header span > span {
+    display: inline-block;
+    padding: 5px;
+    background: black;
+    color: white;
+}
+.content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin: 15px 0 0 0
+}
+.col1 {
+    width: 64.5%;
+}
+.col1-row {
+    margin: 0 0 50px 0;
+    background: white;
+    
+}
+.banner1, .banner2 {
+    height: 300px;
+    background: url("https://imgur.com/onIQ4Hc.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+}
+.para {
+    padding: 0 10px 15px 10px;
+}
+.para h2 {
+    font-weight: 500   
+}
+.col2 {
+    width: 32.5%;
+}
+.additional {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.additional a {
+    padding: 15px;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none
+}
+.additional a:hover {
+    background: rgba(128, 128, 128, 0.3);
+    border-color: rgba(128, 128, 128, 0.3)
+}
+.additional span > span {
+    display: inline-block;
+    padding: 3px 7px;
+    background: black;
+    color: white;
+    font-weight: lighter;
+}
+.banner2 {
+    background: url("https://imgur.com/mfFMOz7.jpg");
+    background-size: cover;
+    background-position-y:  -80px;
+}
+.about {
+    background: white;
+    margin: 0 0 40px 0
+}
+.avatar {
+    background: url("https://imgur.com/ksu5d7x.jpg");
+    background-size: cover;
+    background-position-y: center;
+    height: 250px;
+}
+.post {
+    margin: 0 0 40px 0;
+}
+.tags > span, .post > span {
+    font-size: 25px;
+    padding: 15px;
+    background: rgba(128, 128, 128, 0.2);
+    display: block
+}
+.sub-post {
+    background: white;
+    padding: 13px;
+    display: flex;
+    align-items: center;
+}
+.sub-post:hover {
+    background: rgba(128, 128, 128, 0.3)
+}
+.thumbnail {
+    height: 50px;
+    width: 50px;
+    margin: 0 15px 0 0;
+}
+.thumbnail > img {
+    width: 100%;
+}
+.thumbnail + span {
+    font-size: 18px;
+}
+.thumbnail + span > span {
+    font-size: 15px;
+}
+.tags {
+    background: white;
+}
+.tags > .para {
+    padding: 15px
+}
+.tags > .para > span {
+    padding: 2px 7px;
+    background: rgba(128, 128, 128, 0.3);
+    display: inline-block;
+    font-size: 12px;
+    text-transform: capitalize;
+    margin: 5px
+}
+.content > * > * {
+    box-shadow: 0 0 10px 1px grey;
+}
+.footer {
+    background:#616161;
+    color: white;
+    padding: 50px;
+    height: 100px;
+}
+.footer > a {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 24px;
+    background: black;
+    color: white
+}
+.footer > a:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: black
+}
+.prev {
+    cursor: not-allowed;
+    opacity: 0.3
+}
+
+@media all and (max-width: 1000px) {
+    .content {
+        display: block
+    }
+    .body {
+        padding: 0 15px;
+        width: auto
+    }
+    .col1, .col2 {
+        width: 100%;
+    }
+    .footer {
+        margin: 50px 0 0 0
+    }
+    .last-post {
+        display: none
+    }
+}
