@@ -8,7 +8,7 @@ body {
 }
 .body {
     max-width: 1400px;
-    width: 100%;
+    padding: 0 15px;
     margin: 0 auto;
 }
 .header {
@@ -172,7 +172,6 @@ body {
         display: block
     }
     .body {
-        padding: 0 15px;
         width: auto
     }
     .col1, .col2 {
