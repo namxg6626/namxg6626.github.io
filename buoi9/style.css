@@ -179,7 +179,7 @@ a {
     color: grey;
     font-size: 50px;
 }
-
+/* Tablet */
 @media all and (min-width: 600px) {
     .flex {
         display: flex;
@@ -189,6 +189,7 @@ a {
         width: 49%
     }
 }
+/* laptop + desktop */
 @media all and (min-width: 1000px) {
     .side-bar {
         display: block;
@@ -205,5 +206,8 @@ a {
     }
     .header h1 {
         font-size: 90px;
+    }
+    .big-picture {
+        display: none
     }
 }
