@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+  padding: 0 3%;
+  color: #757575;
+}
+.header {
+  text-align: center;
+  padding: 20% 5%;
+}
+.big-picture {
+  max-width: 600px;
+  margin: 15px auto;
+}
+.big-picture img {
+  width: 100%;
+  height: auto;
+}
+.header h1 {
+  font-size: 64px;
+  color: black;
+}
+.content > * {
+    overflow-y: hidden;
+    margin: 50px 0 0 0
+}
+h1 {
+  font-weight: 400;
+  margin: 30px 0;
+  color: #757575;
+}
+button {
+  padding: 12px 24px;
+  background: #f1f1f1;
+  /* margin: 15px 0 0 0; */
+  border: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+button:hover {
+  background: rgb(202, 202, 202);
+}
+button i {
+  margin: 0 5px 0 0;
+}
+.image-half {
+  width: 100%;
+  margin: 15px 0 0 0;
+}
+.image-half img {
+  width: 100%;
+}
+.image-half img + img {
+  margin: 10px 0 0 0;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+.percent-100 {
+  background: #f1f1f1;
+  height: 30px;
+  width: 100%;
+  margin: 10px 0;
+}
+.percent-mod {
+  background: #616161;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+.about br ~ p {
+  letter-spacing: 4px;
+}
+.career {
+  background: #616161;
+  text-align: center;
+  overflow: hidden;
+  margin: 30px 0;
+}
+.career > * {
+  margin: 30px;
+  color: white;
+  font-size: 19px;
+}
+.sub-reputation {
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
+.sub-reputation img {
+  border-radius: 50%;
+  width: 90px;
+  margin: 0 40px 0 0;
+}
+.reputation p span {
+  display: inline-block;
+  margin: 0 15px 0 0;
+  font-size: 20px;
+  color: black;
+}
+.price {
+    overflow-y: visible !important;
+}
+.price > * {
+  margin: 15px 0;
+}
+.price-type {
+  text-align: center;
+  box-shadow: 0 0 10px 1px rgba(128, 128, 128, 0.2);
+}
+.price-type:hover {
+  box-shadow: 0 0 10px 1px rgba(128, 128, 128, 0.5);
+}
+.basic h1,
+.pro h1 {
+  color: white;
+  background: #616161;
+  margin: 0;
+  padding: 30px;
+}
+.pro h1 {
+  background: black;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.price-type li + li {
+  border: 1px solid #eee;
+  border-top: none;
+  padding: 20px;
+}
+.price-type ul li span {
+  font-size: 30px;
+  display: block;
+  margin: 5px;
+}
+.contact p i {
+    text-align: center;
+    font-size: 25px;
+    height: 40px;
+    width: 50px;
+}
+.contact > img {
+    width: 100%;
+    margin: 30px 0;
+}
+.contact form input {
+    display: block;
+    border: 1px solid #eee;
+    padding: 24px 10px;
+    width: calc(100% - 22px)
+}
+.footer {
+    background: #F7F7F7;
+    text-align: center;
+    padding: 50px;
+    margin: 50px 0 0 0;
+    font-size: 15px;
+}
+a {
+    color: inherit
+}
+.side-bar {
+    display: none
+}
+.nav {
+    display: flex;
+    position: sticky;
+    float: right;
+    top: 0;
+    padding: 10px;
+    background: white;
+    color: grey;
+    font-size: 50px;
+}
+
+@media all and (min-width: 600px) {
+    .flex {
+        display: flex;
+        justify-content: space-between;
+    }
+    .image-half, .price-type {
+        width: 49%
+    }
+}
+@media all and (min-width: 1000px) {
+    .side-bar {
+        display: block;
+        width: 40%;
+        position: fixed;
+        height: 100%;
+        background: url('https://www.w3schools.com/w3images/profile_girl.jpg');
+        background-size: cover;
+        background-position-x: center;
+    }
+    .webpage {
+        width: 60%;
+        margin-left: 40%;
+    }
+    .header h1 {
+        font-size: 90px;
+    }
+}
