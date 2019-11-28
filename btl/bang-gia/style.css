@@ -1,0 +1,143 @@
+body {
+    margin: 0
+}
+.webpage {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.flex-items {
+    display: flex;
+    align-items: center;
+}
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+    justify-content: space-between;
+}
+.flex-items > svg {
+    margin: 0 30px 0 0;
+    height: 60px
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+ul a, .select-lang + a {
+    display: block;
+    padding: 12px 24px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none
+}
+ul a:hover {
+    color: #08589D
+}
+.select-lang > svg {
+    height: 30px;
+    width: 30px;
+    margin: 0 15px 0 0;
+}
+.select-lang + a {
+    background: #2979FF;
+    color: white;
+    height: 21px;
+    border-radius: 5px;
+    padding: 8px 24px
+}
+.banner {
+    height: 500px;
+    background: #1976D2;
+    justify-content: flex-end;
+    color: white
+}
+.banner p {
+    font-size: 22px;
+    width: 60%
+}
+.banner h1 {
+    font-size: 45px;
+}
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+.flex {
+    display: flex
+}
+.flex-column {
+    flex-direction: column;
+}
+.menu-content {
+    margin: 48px 0 0 0
+}
+.op {
+    background: #E8F2FB;
+    text-align: center;
+    color: black;
+    width: 20%;
+    padding: 24px 0;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-top : 5px solid #1976D2;
+    transition: 0.12s
+}
+.op + .op {
+    border-left: 0
+}
+.op h3 {
+    font-weight: 400;
+    margin: 5px 0 0 0
+}
+.op span {
+    font-weight: 500;
+}
+.op:hover {
+    background: #D3E5F7
+}
+.active {
+    background: white;
+    border-top-color: #4fc3f7;
+    border-bottom: none
+}
+.active:hover {
+    background: white
+}
+.active h3 {
+    font-weight: 500;
+}
+.active span {
+    color: #0361cc
+}
+.title-box {
+    padding: 48px;
+}
+.title-box > h1 ~ p {
+    font-size: 24px;
+    width: 60%
+}
+.title-box p + p {
+    background: rgba(79, 195, 247, 0.3);
+    border-left: 3px solid #137fb1;
+    font-size: 18px;
+    padding: 8px 16px;
+    color: rgb(0, 0, 0, 0.8);
+    width: calc(60% - 33px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.title-box p a {
+    display: inline-block;
+    color: #00579B;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #00579B;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.15s
+}
+.title-box p a:hover {
+    background: #00579B;
+    color: white
+}
