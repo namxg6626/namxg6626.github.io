@@ -50,6 +50,7 @@ ul a:hover {
     padding: 200px 0 0 0;
     background: #1976D2;
     color: white;
+    overflow: hidden;
 }
 .banner p {
     font-size: 22px;
@@ -69,10 +70,16 @@ ul a:hover {
 .flex-column {
     flex-direction: column;
 }
-.menu-content {
-    display: flex;
+.menu-sticky {
     position: sticky;
     top: 0;
+    background: #1976D2;    
+    width: 100%
+}
+.menu-content {
+    display: flex;
+    max-width: 1250px;
+    margin: 0 auto
 }
 .op {
     background: #E8F2FB;
@@ -81,7 +88,6 @@ ul a:hover {
     width: 20%;
     padding: 24px 0;
     border: 1px solid rgba(0,0,0,0.3);
-    border-top : 5px solid #1976D2;
     transition: 0.12s
 }
 .op + .op {
@@ -99,7 +105,7 @@ ul a:hover {
 }
 .active {
     background: white;
-    border-top-color: #4fc3f7;
+    border-top: 3px solid #4fc3f7;
     border-bottom: none
 }
 .active:hover {

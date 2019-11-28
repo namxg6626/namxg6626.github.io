@@ -23,7 +23,7 @@
     vertical-align: bottom;
 }
 td {
-    border: 1px solid grey;
+    border: 1px solid #eee;
     padding: 8px
 }
 table p {
@@ -59,4 +59,12 @@ td svg {
     height: 25px;
     width: 25px;
     fill: #2979FF
+}
+.x-icon {
+    height: 20px;
+    width: 20px;
+    fill: #ddd
+}
+table + table tr > td ~ td {
+    text-align: center
 }
