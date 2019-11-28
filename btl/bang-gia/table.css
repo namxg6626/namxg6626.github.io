@@ -24,7 +24,7 @@
 }
 td {
     border: 1px solid #eee;
-    padding: 8px
+    padding: 12px 24px!important
 }
 table p {
     margin: 0;
@@ -50,10 +50,6 @@ table p {
 }
 .table-content {
     font-weight: 500;
-    padding: 0 0 0 16px
-}
-td {
-    padding: 12px
 }
 td svg {
     height: 25px;
