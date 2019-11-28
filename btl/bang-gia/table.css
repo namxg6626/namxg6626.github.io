@@ -45,7 +45,15 @@ table p {
 .bg-lightblue {
     background: #f3f9ff
 }
+.bg-lightgrey {
+    background: #FBFBFB
+}
 .table-content {
     font-weight: 500;
     padding: 0 0 0 16px
+}
+td svg {
+    height: 25px;
+    width: 25px;
+    fill: #2979FF
 }

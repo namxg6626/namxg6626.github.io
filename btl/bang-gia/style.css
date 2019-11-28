@@ -47,14 +47,14 @@ ul a:hover {
     padding: 8px 24px
 }
 .banner {
-    height: 500px;
+    padding: 200px 0 0 0;
     background: #1976D2;
-    justify-content: flex-end;
-    color: white
+    color: white;
 }
 .banner p {
     font-size: 22px;
-    width: 60%
+    width: 60%;
+    margin-bottom: 48px
 }
 .banner h1 {
     font-size: 45px;
@@ -70,7 +70,9 @@ ul a:hover {
     flex-direction: column;
 }
 .menu-content {
-    margin: 48px 0 0 0
+    display: flex;
+    position: sticky;
+    top: 0;
 }
 .op {
     background: #E8F2FB;
