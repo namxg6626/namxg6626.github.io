@@ -48,6 +48,9 @@ ul a:hover {
     box-shadow: 0 1px 4px 0 grey;
     color: white;
 }
+.content {
+    padding: 0 0 100px 0
+}
 .banner {
     padding: 125px 0 0 0;
     background: #1976D2;
@@ -164,4 +167,46 @@ ul a:hover {
 hr {
     border: 1px solid #eee;
     border-top: 0
+}
+.footer {
+    background: #FAFAFA;
+    padding: 48px 0;
+    border-top: 1px solid #eee;
+}
+.footer ul {
+    display: block;
+}
+.footer li {
+    padding: 8px 12px 8px 8px;
+    position: relative
+}
+.footer svg + ul > li:before, .col-w-50 ul li:before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 17px;
+    width: 4px;
+    height: 4px;
+    background: #546E7A;
+    border-radius: 50%
+}
+.col-w-50 ul li {
+    margin-left: 12px!important
+}
+.footer p i {
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 19px 0 5px;
+    width: 30px;
+    color: grey
+}
+.store-icon {
+    height: 60px;
+    margin: -5px 0 0 -5px
+}
+.footer img + img {
+    margin: -10px 0 0 -5px
+}
+.bolder {
+    font-weight: 500;
 }
