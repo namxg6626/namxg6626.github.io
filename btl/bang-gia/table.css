@@ -19,6 +19,10 @@
 .border-none {
     border: 0
 }
+.border-round {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 87, 155, 0.3);
+}
 .valign-bot {
     vertical-align: bottom;
 }
