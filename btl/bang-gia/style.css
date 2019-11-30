@@ -93,9 +93,11 @@ ul a:hover {
     width: 20%;
     padding: 24px 0;
     border: 1px solid rgba(0,0,0,0.3);
-    transition: 0.12s
+    transition: 0.15s;
+    border-top: 3px solid;
+    border-top-color: #E8F2FB;
 }
-.op + .op {
+.op + * {
     border-left: 0
 }
 .op h3 {
@@ -121,6 +123,9 @@ ul a:hover {
 }
 .active span {
     color: #0361cc
+}
+.content-tab {
+    display: block;
 }
 .title-box {
     padding: 48px;
