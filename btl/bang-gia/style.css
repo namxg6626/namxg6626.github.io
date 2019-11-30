@@ -47,6 +47,7 @@ ul a:hover {
     padding: 8px 24px;
     box-shadow: 0 1px 4px 0 grey;
     color: white;
+    width: max-content
 }
 .content {
     padding: 0 0 100px 0
@@ -74,6 +75,7 @@ ul a:hover {
 }
 .flex-column {
     flex-direction: column;
+    justify-content: space-between;
 }
 .menu-sticky {
     position: sticky;
@@ -113,7 +115,7 @@ ul a:hover {
 .active {
     background: white;
     border-top: 3px solid #4fc3f7;
-    border-bottom: none
+    border-bottom: none;
 }
 .active:hover {
     background: white
@@ -125,7 +127,7 @@ ul a:hover {
     color: #0361cc
 }
 .content-tab {
-    display: block;
+    display: none;
 }
 .title-box {
     padding: 48px;
@@ -133,6 +135,10 @@ ul a:hover {
 .title-box > h1 ~ p {
     font-size: 24px;
     width: 60%
+}
+#free h1 ~ p {
+    width: 60%;
+    margin: 0 auto
 }
 .title-box p + p {
     background: rgba(79, 195, 247, 0.3);
@@ -159,8 +165,26 @@ ul a:hover {
     background: #00579B;
     color: white
 }
+#free .col-w-40 p {
+    width: 70%;
+    transition: 0.15s
+}
+.thin-border {
+    border: 1px solid #eee;
+}
+#free .col-w-25:hover {
+    box-shadow: 0 0 7px 1px #1976D2
+}
+#free .col-w-25 ul li {
+    display: flex;
+    align-items: center;
+    margin: 8px 0
+}
+#free .col-w-25 ul li img {
+    margin: 0 10px 0 0
+}
 .block {
-    display: block
+    display: block!important
 }
 .font-sm {
     font-size: 14px!important;
@@ -168,6 +192,9 @@ ul a:hover {
 .font-md {
     font-size: 16px!important;
     font-weight: 500;
+}
+.font-lr {
+    font-size: 20px!important;
 }
 hr {
     border: 1px solid #eee;
@@ -214,4 +241,7 @@ hr {
 }
 .bolder {
     font-weight: 500;
+}
+.pad-md {
+    padding: 16px!important 
 }
