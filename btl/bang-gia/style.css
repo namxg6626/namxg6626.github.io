@@ -43,7 +43,7 @@ ul a:hover {
     background: #2979FF;
     color: white;
     height: 21px;
-    border-radius: 2px;
+    border-radius: 4px;
     padding: 8px 24px;
     box-shadow: 0 1px 4px 0 grey;
     color: white;
@@ -172,15 +172,16 @@ ul a:hover {
 .thin-border {
     border: 1px solid #eee;
 }
-#free .col-w-25:hover {
-    box-shadow: 0 0 7px 1px #1976D2
+#free .col-w-40:hover {
+    box-shadow: 0 0 7px 1px rgba(83, 155, 255, 0.5);
+    border: 1px solid rgba(83, 155, 255, 0.5);
 }
-#free .col-w-25 ul li {
+#free .col-w-40 ul li {
     display: flex;
     align-items: center;
-    margin: 8px 0
+    margin: 16px 0
 }
-#free .col-w-25 ul li img {
+#free .col-w-40 ul li img {
     margin: 0 10px 0 0
 }
 .block {
