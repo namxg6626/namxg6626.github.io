@@ -51,6 +51,7 @@ table p {
 }
 .table-content {
     font-weight: 500;
+    color: black!important
 }
 td svg {
     height: 25px;
@@ -64,4 +65,7 @@ td svg {
 }
 table + table tr > td ~ td {
     text-align: center
+}
+table + table tr > td {
+    color: #596A7D
 }
