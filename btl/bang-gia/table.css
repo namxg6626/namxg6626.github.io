@@ -58,6 +58,10 @@ td svg {
     width: 25px;
     fill: #2979FF
 }
+td i {
+    color: #2979FF;
+    font-size: 25px;
+}
 .x-icon {
     height: 20px;
     width: 20px;
