@@ -1,3 +1,19 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+}
+ul a, .button-link {
+    display: block;
+    padding: 12px 24px;
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+}
+ul a:hover {
+    color: #08589D
+}
 .menu1 {
     position: relative;
 }
