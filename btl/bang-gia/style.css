@@ -73,7 +73,7 @@ body {
 .content-tab {
     display: none;
 }
-.title-box > h1 ~ p {
+.pad-16 > h1 ~ p {
     font-size: 24px;
     width: 60%
 }
@@ -81,7 +81,7 @@ body {
     width: 60%;
     margin: 0 auto
 }
-.title-box p + p {
+.pad-16 p + p {
     background: rgba(79, 195, 247, 0.3);
     border-left: 3px solid #137fb1;
     font-size: 18px;
@@ -92,7 +92,7 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-.title-box p a {
+.pad-16 p a {
     display: inline-block;
     color: #00579B;
     text-decoration: none;
@@ -102,7 +102,7 @@ body {
     font-weight: 500;
     transition: 0.15s
 }
-.title-box p a:hover {
+.pad-16 p a:hover {
     background: #00579B;
     color: white
 }

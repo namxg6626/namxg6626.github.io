@@ -7,7 +7,7 @@
         font-size: 15px;
     }
     .container {
-        max-width: 1000px;
+        max-width: 1000px!important;
     }
     .menu-content {
         max-width: 1000px;
@@ -19,7 +19,7 @@
         font-size: 85%!important;
     }
     .container {
-        max-width: 700px;
+        max-width: 700px!important;
     }
     .menu-content {
         max-width: 700px;
@@ -30,7 +30,7 @@
         overflow: scroll;
     }
     #menu-icon {
-        font-size: 24px;
+        font-size: 24px!important;
     }
     #open:checked + .align-items-center {
         position: fixed;
@@ -52,7 +52,7 @@
         width: 100%;
     }
     #logo-menu {
-        display: flex;
+        display: flex!important;
         border-top: none;
         justify-content: space-between;
     }
@@ -93,7 +93,7 @@
         background: #f3f9ff!important;  
     }
     #dropdown-icon {
-        display: inline-block
+        display: inline-block!important
     }
     .footer > .flex {
         display: block!important;
