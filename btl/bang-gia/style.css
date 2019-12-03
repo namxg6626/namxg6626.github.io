@@ -1,3 +1,6 @@
+* {
+    max-width: 100%;
+}
 body {
     margin: 0
 }
@@ -235,12 +238,6 @@ hr {
     margin: 0 19px 0 5px;
     width: 30px;
     color: grey
-}
-.store-icon {
-    margin: -5px 0 0 -5px
-}
-.footer img + img {
-    margin: -10px 0 0 -5px
 }
 .bolder {
     font-weight: 500;
