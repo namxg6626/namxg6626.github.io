@@ -72,6 +72,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+.align-items-center {
+    display: flex;
+    align-items: center
+}
+.justtify-content-between {
+    display: flex;
+    justify-content: space-between;
+}
 .menu-sticky {
     position: sticky;
     top: 0;
@@ -229,7 +237,6 @@ hr {
     color: grey
 }
 .store-icon {
-    height: 60px;
     margin: -5px 0 0 -5px
 }
 .footer img + img {
@@ -242,5 +249,8 @@ hr {
     padding: 16px!important 
 }
 .footer .col-w-20 img {
-    width: 100%
+    width: 70%
+}
+#dropdown-icon {
+    display: none
 }
