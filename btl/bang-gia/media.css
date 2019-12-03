@@ -1,0 +1,104 @@
+@media all and (max-width: 1200px) {
+    .webpage {
+        letter-spacing: -0.5px;
+    }
+    .menu-header a {
+        padding: 8px;
+        font-size: 15px;
+    }
+    .container {
+        max-width: 1100px;
+    }
+    .menu-content {
+        max-width: 1100px;
+    }
+}
+@media all and (max-width: 1000px) {
+    .webpage {
+        letter-spacing: -0.5px;
+        font-size: 85%!important;
+    }
+    .container {
+        max-width: 800px;
+    }
+    .menu-content {
+        max-width: 800px;
+    }
+    .header > .flex-items {
+        display: none;
+        background: white;
+        overflow: scroll;
+    }
+    #menu-icon {
+        font-size: 24px;
+    }
+    #open:checked + .flex-items {
+        position: fixed;
+        height: 100%;
+        width: 40%;
+        display: block;
+        top: 0;
+        right: 0;
+        z-index: 1000;
+    }
+    .flex-items ul {
+        display: block
+    }
+    .flex-items ul li {
+        padding: 8px 12px;
+        border-top: 1px solid #eee;
+    }
+    .menu-header {
+        width: 100%;
+    }
+    #logo-menu {
+        display: flex;
+        border-top: none;
+        justify-content: space-between;
+    }
+    #logo-menu > svg {
+        height: 31px;
+        width: 125px
+    }
+    .flex-items > .flex-items {
+        padding: 20px
+    }
+    .flex-items > .flex-items > svg {
+        display: none
+    }
+    .triangle {
+        display: none
+    }
+    .menu1 {
+        height: max-content
+    }
+    .menu2 {
+        display: none;
+        position: unset;
+        width: 100%;
+        opacity: 1;
+        height: max-content
+    }
+    .menu2 li {
+        border: 0px solid #eee!important
+    }
+    .menu1:hover .menu2 {
+        display: block;
+        width: 100%!important
+    }
+    .menu1:hover {
+        background: #f3f9ff!important;
+    }
+    .menu1:hover ul {
+        background: #f3f9ff!important;
+        
+    }
+}
+@media all and (max-width: 850px) {
+    /* .menu-content {
+        display: block;
+    }
+    .op {
+        width: 100%
+    } */
+}
