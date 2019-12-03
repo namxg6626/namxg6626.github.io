@@ -24,7 +24,7 @@
     .menu-content {
         max-width: 700px;
     }
-    .header > .flex-items {
+    .header > .align-items-center {
         display: none;
         background: white;
         overflow: scroll;
@@ -32,7 +32,7 @@
     #menu-icon {
         font-size: 24px;
     }
-    #open:checked + .flex-items {
+    #open:checked + .align-items-center {
         position: fixed;
         height: 100%;
         width: 40%;
@@ -41,10 +41,10 @@
         right: 0;
         z-index: 1000;
     }
-    .flex-items ul {
+    .align-items-center ul {
         display: block
     }
-    .flex-items ul li {
+    .align-items-center ul li {
         padding: 8px 12px;
         border-top: 1px solid #eee;
     }
@@ -60,10 +60,10 @@
         height: 31px;
         width: 125px
     }
-    .flex-items > .flex-items {
+    .align-items-center > .align-items-center {
         padding: 20px
     }
-    .flex-items > .flex-items > svg {
+    .align-items-center > .align-items-center > svg {
         display: none
     }
     .triangle {

@@ -1,0 +1,38 @@
+.footer {
+    background: #FAFAFA;
+    padding: 48px 0;
+    border-top: 1px solid #eee;
+}
+.footer ul {
+    display: block;
+}
+.footer li {
+    padding: 8px 12px 8px 8px;
+    position: relative
+}
+.footer svg + ul > li:before, .col-w-50 ul li:before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 17px;
+    width: 4px;
+    height: 4px;
+    background: #546E7A;
+    border-radius: 50%
+}
+.col-w-50 ul li {
+    margin-left: 12px!important
+}
+.footer p i {
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 19px 0 5px;
+    width: 30px;
+    color: grey
+}
+.footer .col-w-20 img {
+    width: 70%
+}
+#dropdown-icon {
+    display: none
+}
