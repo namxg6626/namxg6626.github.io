@@ -95,6 +95,13 @@
     .menu1:hover ul {
         background: #f3f9ff!important;  
     }
+    #free > .container > div + div {
+        display: block!important
+    }
+    #free > .container > div + div .col-w-40 {
+        width: 100%!important;
+        margin: 15px 0 0 0
+    }
 
     .banner h1 {
         font-size: 24px!important;
@@ -110,6 +117,13 @@
     }
     .pad-16 p + p {
         font-size: 15px!important;
+        align-items: center
+    }
+    .pad-16 p + p > a {
+        width: 40%;
+        max-width: 130px;
+        height: 100%;
+        text-align: center;
     }
     #social > .container > .pad-16, #Advanced > .container > .pad-16, #loyalty > .container > .pad-16 {
         padding: 16px 0 16px 0!important;
