@@ -1,0 +1,68 @@
+body {
+  margin: 0;
+}
+.webpage {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(101, 101, 101, 0.11808473389355745) 0%,
+    rgba(255, 255, 255, 1) 100%,
+    rgba(0, 212, 255, 1) 100%
+  ); */
+}
+.banner {
+  overflow: hidden;
+}
+.banner h2 {
+  margin-bottom: 0;
+}
+.para {
+  margin: 10px 0 0 0;
+  background: white
+}
+.para ul li {
+  position: relative;
+}
+.para ul li:before {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 4px;
+  width: 4px;
+  left: -16px;
+  top: 10px;
+  background: #767676;
+  border-radius: 50%;
+}
+.world-map {
+    height: 583px;
+    position: relative;
+    z-index: 0;
+    background: url("../icon/worldmap.jpg");
+    background-position-y: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.world-map img {
+    max-width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.world-map > div > .bolder + .bolder {
+    position: absolute;
+    bottom: 155px;
+    left: 70%;
+}
+.world-map > div > .bolder + .bolder {
+    width: max-content
+}
+.col-w-40 img {
+    max-width: 50%;
+}
+.person-detail {
+    border-right: 3px solid #eee;
+    width: max-content
+}

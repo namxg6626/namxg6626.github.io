@@ -3,6 +3,7 @@
     align-items: center;
     padding: 8px 24px;
     justify-content: space-between;
+    background: white
 }
 .header > .align-items-center {
     width: calc(100% - 125px);

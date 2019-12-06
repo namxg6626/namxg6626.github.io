@@ -1,0 +1,26 @@
+@media all and (max-width: 1000px) {
+    .container-sm {
+        max-width: 800px;
+    }
+    .world-map .font-giant {
+        font-size: 30px!important;
+    }
+    .world-map > div > .bolder + .bolder {
+        position: unset;
+    }
+    .person > .flex {
+        flex-direction: column-reverse;
+    }
+}
+@media all and (max-width: 800px) {
+    .container-sm {
+        max-width: 600px;
+    }
+    .world-map > div > .bolder + .bolder {
+        position: unset
+    }
+    .world-map > div {
+        display: block;
+        padding: 0!important
+    }
+}
