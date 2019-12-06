@@ -276,7 +276,7 @@
       </div>
       <div id="social" class="content-tab">
         <div class="container">
-          <div class="pad-16">
+          <div class=" pad-16">
             <h1>Social Commerce</h1>
             <p>Giải pháp bán hàng toàn diện giúp tối đa hiệu quả bán hàng, marketing và giao tiếp với khách hàng trên
               Facebook, Messenger</p>
@@ -448,7 +448,7 @@
       </div>
       <div style="display: block" id="Advanced" class="content-tab">
         <div class="container">
-          <div class="pad-16">
+          <div class="pad-16 ">
             <h1>Website & Omnichannel</h1>
             <p>Nền tảng website chuyên nghiệp và hệ thống quản lý bán hàng Omnichanel cho mọi nhu cầu kinh
               doanh của bạn</p>
@@ -456,11 +456,16 @@
               <a href="#">Bắt đầu ngay</a>
             </p>
           </div>
+          <div class="container mobile-select-col font-lr">
+             <div class="text-center pad-16 bolder">Advanced Website</div>
+             <div class="text-center pad-16 bolder check-table-active">Omnichannel</div>
+             <div class="text-center pad-16 bolder" id="mobile-select-col-last">Advanced Omnichannel</div>
+          </div>
           <div class="price-table">
-            <table width="100%" style="text-align: center" cellspacing="0">
+            <table width="100%" style="text-align: center!important" cellspacing="0">
               <tbody>
                 <tr>
-                  <td class="col-w-40 border-none" colspan="2"></td>
+                  <td id="none-in-mobile-mode" class="col-w-40 border-none"></td>
                   <td class="col-w-20 bg-lightblue valign-bot">
                     <p class="title">Advandced Website</p>
                     <p class="tag">500.000Đ</p>
@@ -485,7 +490,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="col-w-40 border-none" colspan="2"></td>
+                  <td id="none-in-mobile-mode" class="col-w-40 border-none"></td>
                   <td class="col-w-20 bg-softblue">
                     Website chuyên nghiệp cho thương mại điện tử và doanh nghiệp đa ngành nghề.</td>
                   <td class="col-w-20 bg-softblue">Hệ thống bán hàng đa kênh, quản lý tập trung gồm: Website,
@@ -496,7 +501,7 @@
                 </tr>
               </tbody>
             </table>
-            <table width="100%" cellspacing="0">
+            <table id="compare-table" width="100%" cellspacing="0">
               <tbody>
                 <tr class="bg-lightblue">
                   <td class="col-w-40"><span class="table-content">THANH TOÁN</span></td>
@@ -505,7 +510,7 @@
                   <td class="col-w-20">Theo năm</td>
                 </tr>
                 <tr>
-                  <td colspan="4" class="bg-lightgrey"><span class="table-content">WEBSITE</span></td>
+                  <th colspan="4" class="bg-lightgrey"><span class="table-content">WEBSITE</span></th>
                 </tr>
                 <tr>
                   <td>Giao diện tối ưu trải nghiệm moblie</td>
@@ -573,8 +578,8 @@
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
                 </tr>
-                <tr class="bg-lightgrey ">
-                  <td colspan="4"><span class="table-content">BÁN HÀNG ĐA KÊNH</span></td>
+                <tr>
+                  <th class="bg-lightgrey" colspan="4"><span class="table-content">BÁN HÀNG ĐA KÊNH</span></th>
                 </tr>
                 <tr>
                   <td>E-commerce Website</td>
@@ -620,9 +625,9 @@
                   <td><i class="fas fa-check"></i></td>
                 </tr>
                 <tr>
-                  <td class="bg-lightgrey" colspan="4">
-                    <p class="table-content">QUẢN TRỊ TẬP TRUNG OMNICHANNEL</p>
-                  </td>
+                  <th class="bg-lightgrey" colspan="4">
+                    <span class="table-content">QUẢN TRỊ TẬP TRUNG OMNICHANNEL</span>
+                  </th>
                 </tr>
                 <tr>
                   <td>Quản lý sản phẩm</td>
@@ -678,8 +683,8 @@
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
                 </tr>
-                <tr class="bg-lightgrey">
-                  <td colspan="4"><span class="table-content">MÔ HÌNH VẬN HÀNH GIAO HÀNG</span></td>
+                <tr>
+                  <th class="bg-lightgrey" colspan="4"><span class="table-content">MÔ HÌNH VẬN HÀNH GIAO HÀNG</span></th>
                 </tr>
                 <tr>
                   <td>Mô hình tiêu chuẩn</td>
@@ -711,9 +716,9 @@
                     </svg></td>
                   <td><i class="fas fa-check"></i></td>
                 </tr>
-                <tr class="bg-lightgrey">
-                  <td colspan="4"><span class="table-content">BÁO CÁO TOÀN DIỆN, KIỂM SOÁT HIỆU QUẢ KINH DOANH</span>
-                  </td>
+                <tr>
+                  <th class="bg-lightgrey" colspan="4"><span class="table-content">BÁO CÁO TOÀN DIỆN, KIỂM SOÁT HIỆU QUẢ KINH DOANH</span>
+                  </th>
                 </tr>
                 <tr>
                   <td>Báo cáo doanh thu, hiệu quả bán hàng đa kênh</td>
@@ -739,9 +744,9 @@
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
                 </tr>
-                <tr class="bg-lightgrey">
-                  <td colspan="4"><span class="table-content">TÍCH HỢP GIẢI PHÁP TỐI ƯU QUẢNG CÁO & MARKETING</span>
-                  </td>
+                <tr>
+                  <th class="bg-lightgrey" colspan="4"><span class="table-content">TÍCH HỢP GIẢI PHÁP TỐI ƯU QUẢNG CÁO & MARKETING</span>
+                  </th>
                 </tr>
                 <tr>
                   <td>Facebook Product feed - Dynamic Ads</td>
@@ -773,9 +778,9 @@
                   <td><i class="fas fa-check"></i></td>
                   <td><i class="fas fa-check"></i></td>
                 </tr>
-                <tr class="bg-lightgrey">
-                  <td colspan="4"><span class="table-content">QUẢN TRỊ BÁN HÀNG MỌI LÚC, MỌI NƠI VỚI MOBILE APP</span>
-                  </td>
+                <tr>
+                  <th class="bg-lightgrey" colspan="4"><span class="table-content">QUẢN TRỊ BÁN HÀNG MỌI LÚC, MỌI NƠI VỚI MOBILE APP</span>
+                  </th>
                 </tr>
                 <tr>
                   <td>Ứng dụng quản lý bán hàng trên di động</td>

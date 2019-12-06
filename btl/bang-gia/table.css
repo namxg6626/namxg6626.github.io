@@ -1,9 +1,12 @@
 .valign-bot {
     vertical-align: bottom;
 }
-td {
+td, th {
     border: 1px solid #eee;
-    padding: 12px 24px!important
+    padding: 12px 24px;
+}
+th {
+    text-align: left
 }
 table p {
     margin: 0;

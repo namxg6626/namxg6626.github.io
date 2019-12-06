@@ -15,8 +15,11 @@
 }
 @media all and (max-width: 1000px) {
     .webpage {
-        letter-spacing: -0.5px;
         font-size: 85%!important;
+    }
+    .banner, .menu-sticky ~ *, .footer {
+        padding-right: 8px!important;
+        padding-left: 8px!important
     }
     .container {
         max-width: 700px!important;
@@ -92,6 +95,45 @@
     .menu1:hover ul {
         background: #f3f9ff!important;  
     }
+
+    .banner h1 {
+        font-size: 24px!important;
+    }
+    .banner p {
+        font-size: 18px!important;
+        width: 100%!important
+    }
+
+    .content-tab > .container > .pad-16 > p {
+        width: calc(100% - 35px);
+        font-size: 18px;
+    }
+    .pad-16 p + p {
+        font-size: 15px!important;
+    }
+    #social > .container > .pad-16, #Advanced > .container > .pad-16, #loyalty > .container > .pad-16 {
+        padding: 16px 0 16px 0!important;
+        /* font-size: 85%!important; */
+    }
+
+    #none-in-mobile-mode {
+        display: none
+    }
+    .mobile-select-col {
+        display: block;
+        margin: 0 0 32px 0!important
+    }
+    .check-table-active {
+        background: #90CAF9
+    }
+    .mobile-select-col > div {
+        border: 1px solid rgba(128, 128, 128, 0.5);
+        border-bottom: 1px solid transparent;
+    }
+    #mobile-select-col-last {
+        border-bottom: 1px solid rgba(128, 128, 128, 0.5)
+    }
+
     #dropdown-icon {
         display: inline-block!important
     }

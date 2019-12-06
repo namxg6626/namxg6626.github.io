@@ -122,3 +122,6 @@ body {
 #free .col-w-40 ul li img {
     margin: 0 10px 0 0
 }
+.mobile-select-col {
+    display: none   
+}
