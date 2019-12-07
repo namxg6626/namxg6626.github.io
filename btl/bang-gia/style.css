@@ -35,9 +35,7 @@ body {
 .op {
     background: #E8F2FB;
     text-align: center;
-    color: black;
     width: 20%;
-    padding: 24px 0;
     border: 1px solid rgba(0,0,0,0.3);
     transition: 0.15s;
     border-top: 3px solid;
@@ -48,10 +46,18 @@ body {
 }
 .op h3 {
     font-weight: 400;
-    margin: 5px 0 0 0
+    margin: 5px 0 0 0;
+    color: black;
 }
 .op span {
     font-weight: 500;
+    color: black;
+}
+.op a {
+    display: inline-block;
+    text-decoration: none;
+    height: calc(100% - 48px);
+    padding: 24px 0
 }
 .op:hover {
     background: #D3E5F7

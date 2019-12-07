@@ -69,6 +69,6 @@ for (let i = 0; i < mobileSelectCol.length; i++) {
             cell_2[cellInCompareTable - i - 1].style.display = "table-cell"
         }
 
-        this.classList.add("check-table-active");
+        mobileSelectCol[i].classList.add("check-table-active");
     });
 }
