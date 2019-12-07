@@ -1,6 +1,6 @@
 @media all and (max-width: 1200px) {
     .webpage {
-        letter-spacing: -0.5px;
+        /* letter-spacing: -0.5px; */
     }
     .menu-header a {
         padding: 8px;
@@ -15,7 +15,7 @@
 }
 @media all and (max-width: 1000px) {
     .webpage {
-        letter-spacing: -0.5px;
+        /* letter-spacing: -0.5px; */
         font-size: 85%!important;
     }
     .container {
