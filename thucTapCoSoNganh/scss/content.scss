@@ -1,6 +1,7 @@
 $lightGreen: #79b260;
 
 .content {
+    margin-bottom: 1rem;
     &__impression {
         margin: 10px 0;
         display: flex;
@@ -71,6 +72,10 @@ $lightGreen: #79b260;
         &__table {
             width: 80%;
             
+            .active {
+                background: white;
+                box-shadow: 0px 1px 0 0px white;
+            }
             &__selection {
                 width: max-content;
                 

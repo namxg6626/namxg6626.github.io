@@ -1,3 +1,7 @@
+.content {
+  margin-bottom: 1rem;
+}
+
 .content__impression {
   margin: 10px 0;
   display: -webkit-box;
@@ -86,6 +90,12 @@
 
 .content__product__table {
   width: 80%;
+}
+
+.content__product__table .active {
+  background: white;
+  -webkit-box-shadow: 0px 1px 0 0px white;
+          box-shadow: 0px 1px 0 0px white;
 }
 
 .content__product__table__selection {
