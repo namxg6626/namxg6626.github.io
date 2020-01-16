@@ -1,0 +1,150 @@
+$lightGreen: #79b260;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 10px;
+}
+
+html * {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 100rem;
+    padding: 0 3rem;
+    width: 100%;
+    margin: 0 auto
+}
+
+.header {
+    &__status {
+        background: #424242;
+        .container {
+            justify-content: flex-end;
+            align-items: center;
+            display: flex;
+        }
+
+        a {
+            display: inline-block;
+            padding: 0.1rem 2rem;
+            height: 100%;
+            color: white;
+            text-decoration: none;
+        }
+    }
+    &__tool-bar {
+        background: linear-gradient(bottom, #ebebeb, #ffffff);
+        padding: 2rem 0;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &__logo {
+            width: 11rem;
+            height: 6rem;
+            background-color: blue;
+        }
+        &__search {
+            background: $lightGreen;
+            border-radius: 0.2rem;
+            display: flex;
+            padding: 0.5rem 1rem;
+            align-items: center;
+            input {
+                border: 1px solid white;
+                border-radius: 0.2rem;
+                width: 33rem;
+                height: 3rem;
+            }
+            input + input {
+                background: $lightGreen;
+                border: 0 solid $lightGreen;
+                color: white;
+                width: initial;
+                // margin-left: 3rem
+            }
+        }
+        &__cart {
+            border-right: 1px solid rgba(190, 190, 190, 0.5);
+            padding-right: 1.5rem;
+            color: #bebebe;
+
+            & > * {
+                font-size: 2.5rem;
+                font-weight: 500;
+            }
+            span {
+                font-size: 1.5rem;
+            }
+            p > i {
+                font-size: 2.5rem;
+                color: $lightGreen
+            }
+            p + p {
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            a {
+                background: linear-gradient(bottom, #252525, #414141);
+                border-radius: 2px;
+                padding: 0.3rem 0.5rem;
+                color: white;
+                text-decoration: none;
+                font-weight: 400;
+            }
+        }
+        &__wish {
+            padding: 1rem;
+            text-align: center;
+            * {
+                font-size: 2rem;
+            }
+            i {
+                color: $lightGreen
+            }
+        }
+    }
+    nav {
+        border-top: 1px solid #cecece;
+        border-bottom: 1px solid #cecece;
+    }
+    nav ul {
+        display: flex;
+        list-style: none;
+        a {
+            text-decoration: none;
+            color: black;
+            padding: 0.3rem 0.2rem;
+            width: 100%;
+            transition: 0.12s;
+            display: block;
+        }
+        a:hover {
+            background: linear-gradient(bottom, $lightGreen, #92d774);
+            color: white;
+        }
+        li {
+            display: block;
+            width: 11.1111%;
+            text-align: center;
+            font-weight: 500;
+        }
+    }
+}
