@@ -1,0 +1,24 @@
+1.extension//olns//Ốp lưng iPhone người sói 6-7-8-X-Plus//Wolverine//Nhựa cứng//79//Iphone 6-7-8-X-Plus//26-3-2019//12  			//gomhang.vn/images/stories/virtuemart/product/op_wolverine_iphone_x_xs_avatar_mau_do.jpg
+2.extension//olslc//Ốp lưng silicon case OEM iPhone//OEM//silicon//119//Iphone 6-7-8-X-Plus//26-6-2019//12  					//gomhang.vn/images/stories/virtuemart/product/ava-silicone-case-iph91.jpg
+3.extension//olsm//Ốp lưng 360 siêu mỏng iPhone//null//nhựa mềm//49//Iphone 6-7-8-X-Plus//21-6-2019//12    					//gomhang.vn/images/stories/virtuemart/product/360-sieu-m%E1%BB%8Fng-7.jpg	
+4.extension//olcl//Ốp lưng cường lực Toughened Glass iPhone 6-7-8-X//null//glass//99//Iphone 6-7-8-X-Plus//1-5-2019//12				//gomhang.vn/images/stories/virtuemart/product/avt1871.jpg
+5.extension//olrk//Ốp lưng RichKid Dubai cho iPhone//null//glass//129//Iphone 6-7-8-X-Plus//1-5-2019//12					//gomhang.vn/images/stories/virtuemart/product/op_lung_rich_kid_dubai_iphone_7_8_avatar%20gold.jpg
+6.extension//olcn//Ốp lưng chống nóng iPhone//null//glass//59//Iphone 6-7-8-X-Plus//1-5-2019//12						//gomhang.vn/images/stories/virtuemart/product/ava-ch%E1%BB%91ng-nong-iph740.jpg
+7.extension//oldr//Túi da rút cho iPhone//null//da//60//Iphone 6-7-8-X-Plus//6-1-2019//12							//gomhang.vn/images/stories/virtuemart/product/bao-da-rut-iphone-6-7-ava.jpg
+8.extension//olslcm//Ốp silicon siêu mịn iPhone//null//silicon//59//Iphone 6-7-8-X-Plus//1-5-2019//12						//gomhang.vn/images/stories/virtuemart/product/op-silicon-sieu-min-iphone-7-plus-ava9538.jpg
+9.extension//oldung//Ốp dựng mọi góc độ iPhone//null//nhựa//159//Iphone 6-7-8-X-Plus//22-03-2019//12						//gomhang.vn/images/stories/virtuemart/product/ava875.jpg
+10.extension//olhc//Ốp lưng Hoco Ultrathin cho iPhone//null//nhựa mềm//39//Iphone 6-7-8-X-Plus//8-7-2019//12					//gomhang.vn/images/stories/virtuemart/product/ava-hoco-ultrathin.jpg
+11.extension//olj3//Ốp lưng Jetblack 360 cho iPhone//null//nhựa cứng//120//Iphone 6-7-8-X-Plus//18-7-2019//12					//gomhang.vn/images/stories/virtuemart/product/op-lung-jetblack-360-cho-iphone-7-plus-ava.jpg
+12.extension//olsm//Ốp lưng Memumi siêu mỏng iPhone//null//silicon//79//Iphone 6-7-8-X-Plus//9-10-2019//12					//gomhang.vn/images/stories/virtuemart/product/op_memumi_sieu_mong_iphone_6_6s_avatar.jpg
+13.extension//olbv//Case bảo vệ iPaky iPhone//null//nhựa//149//Iphone 6-7-8-X-Plus//22-03-2019//12						//gomhang.vn/images/stories/virtuemart/product/ava-ipaky-6667.jpg
+
+14.extension//oluc//Ốp lưng U case Slimfit iPhone//null//nhựa mềm//149//Iphone 6-7-8-X-Plus//4-7-2019//12					//gomhang.vn/images/stories/virtuemart/product/ava2394.jpg
+15.extension//olvdc//Ốp lưng Sulada vân da iPhone 11//null//nhựa cứng//99//Iphone 11 Plus//1-7-2019//12						//gomhang.vn/images/stories/virtuemart/product/op-lung-sulanda-van-da-iphone-11-pro-281.jpg
+16.extension//olcs//Ốp lưng LEEU trong chống sốc iPhone 11//null//silicon//99//Iphone 11 Plus//7-10-2019//12					//gomhang.vn/images/stories/virtuemart/product/op-leeu-silicon-iphone-11-1.jpg
+
+17.extension//olcs//Ốp da mềm chống xước camera lồi iPhone//null//nhựa nhám//49//Iphone 6-7-8-X-Plus//02-03-2019//12				//gomhang.vn/images/stories/virtuemart/product/ava-da-m%E1%BB%81m-b%E1%BA%A3o-v%E1%BB%87-cam455.jpg
+
+18.extension//olndr//Ốp lưng iPhone XS Max nhựa dẻo ROOSEVELT II JM Xanh lá//null//nhựa mềm//129//Iphone 6-7-8-X-Plus//4-7-2019//12		//cdn.tgdd.vn/Products/Images/60/215690/op-lung-iphone-xs-max-deo-roosevelt-ii-jm-xanh-la-1-1-600x600.jpg
+19.extension//olndm//Ốp lưng iPhone XS Max nhựa dẻo Matte IMD COSANO CN2190926 Dino Xanh//null//nhựa cứng//90//Iphone 11 Plus//19-7-2019//12	//cdn.tgdd.vn/Products/Images/60/215679/op-lung-iphone-xs-max-nhua-deo-cn2190926-dino-xanh-1-600x600.jpg
+20.extension//olndh//Ốp lưng iPhone XS Max nhựa dẻo HARBLE JM Gold//null//silicon//70//Iphone 11 Plus//27-04-2019//12				//cdn.tgdd.vn/Products/Images/60/215671/op-lung-iphone-xs-max-nhua-deo-harble-jm-gold-1-1-600x600.jpg
+

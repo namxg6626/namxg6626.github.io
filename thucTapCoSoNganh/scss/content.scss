@@ -106,6 +106,10 @@ $lightGreen: #79b260;
                 }
                 &__element {
                     width: 13rem;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
                     & * {
                         text-align: center;
                         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -127,8 +131,13 @@ $lightGreen: #79b260;
                             background-position-x: center;
                         }
                     }
+                    p {
+                        color: #646464;
+                        font-weight: 400;
+                    }
                     p + p {
                         color: red;
+                        font-size: 1.6rem;
                     }
                 }
             }

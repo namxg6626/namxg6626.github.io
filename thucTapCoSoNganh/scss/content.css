@@ -140,6 +140,16 @@
 
 .content__product__table__list__element {
   width: 13rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .content__product__table__list__element * {
@@ -166,7 +176,13 @@
   background-position-x: center;
 }
 
+.content__product__table__list__element p {
+  color: #646464;
+  font-weight: 400;
+}
+
 .content__product__table__list__element p + p {
   color: red;
+  font-size: 1.6rem;
 }
 /*# sourceMappingURL=content.css.map */
