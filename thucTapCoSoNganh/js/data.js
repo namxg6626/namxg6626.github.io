@@ -70,6 +70,16 @@ let listProductsRawData = [
     "extension//oljkv//Ốp lưng Memumi siêu mỏng 0.3 mm cho iPhone XS Max//null//silicon//99//Iphone 6-7-8-X-Plus//1-5-2019//12//salt.tikicdn.com/cache/w1200/ts/product/80/8b/8f/cb681debd613c1157e609263a830163c.jpg",
     "extension//oldeo//ỐP LƯNG DẺO TRONG SUỐT CHO IPHONE X//null//nhựa//159//Iphone X-Plus//22-03-2019//12//salt.tikicdn.com/cache/w1200/ts/product/b8/47/57/18123de57a3306f2606e996727d02305.jpg",
     "extension//olcsc//Ốp lưng chống sốc cho Iphone 6 Plus / 6s Plus//null//nhựa mềm//79//Iphone 6-Plus//8-7-2019//12//salt.tikicdn.com/cache/w1200/ts/product/9b/0c/35/65fdc092dc15c43643e7d007fc67db7d.jpg",
+    "extension//ducanh22//Loa Bluetooth W-King X3//W-King X3//Nhựa cứng//650//smart phone//16-07-2019//2//i.imgur.com/6g7aLXd.png",
+    "extension//ducanh23//Ốp lưng iPad Air 2019 Nắp gập Stand Flip MEEKER Navy//Apple//Da//210//iPad//15-09-2019//1//i.imgur.com/2RuqFZX.jpg",
+    "extension//ducanh24//Củ sạc nhanh Remax RP-U46//Remax//Nhựa cứng//300//smart phone//24-08-2019//1//i.imgur.com/fyPmKHM.png",
+    "extension//ducanh25//Miếng dán màn hình Oppo A5//Oppo//Nhựa cứng//50//Oppo A5//22-03-2019//1//i.imgur.com/PZ2ckMG.jpg",
+    "extension//ducanh26//Miếng dán lưng iPhone 11//Apple//Nhựa cứng//50//Iphone 11//24-08-2019//1//i.imgur.com/uS9fbLd.jpg",
+    "extension//ducanh27//Loa Bluetooth chống nước Vidvie SP901//Vidvie//Nhựa cứng//630//Smart phone//25-09-2019//3//i.imgur.com/gcpPG2y.jpg",
+    "extension//ducanh28//Miếng dán màn hình Galaxy Note 10//Galaxy//Nhựa cứng//50//Galaxy Note 10//14-10-2019//1//i.imgur.com/glbNkO7.jpg",
+    "extension//ducanh29//Củ sạc 4 cổng USB Remax RP-U43//Remax//Nhựa cứng//250//Smart phone//19-11-2019//2//i.imgur.com/eOkP17b.jpg",
+    "extension//ducanh30//Tai nghe Bluetooth Mozard S205A Xanh//Mozard//Nhựa dẻo//229//Smart phone//16-10-2019//2//i.imgur.com/5VoOpBG.jpg",
+    "extension//ducanh31//Cáp 3 đầu Lightning Type C Micro 1m eValu Spanker B Xanh Biển//null//Nhựa dẻo//200//Smart phone//15-11-2019//2//i.imgur.com/uqu1nbM.jpg",
 ]
 let listExtensionsData = [];
 for (let element of listProductsRawData) {
