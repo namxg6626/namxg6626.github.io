@@ -33,7 +33,7 @@ let listProductsRawData = [
     "extension//hiep8//Tai nghe Bluetooth i7s//null//nhựa//145//iPhone 6S trở xuống//12-1-2019//12//gomhang.vn/images/stories/virtuemart/product/ava-i7s.jpg",
     "xtension//hiep9//Tai nghe Bluetooth 5.0 i12 đen//null//nhựa//399//iPhone 5 trở lên//16-7-2019//12//gomhang.vn/images/stories/virtuemart/product/tai-nghe-bluetooth-i12-den.jpg",
     "extension//hiep10//Tai nghe Galaxy Note 5//Samsung//nhựa//99//Dòng máy Samsung hỗ trợ jack 3.5mm//14-3-2019//12//gomhang.vn/images/stories/virtuemart/product/tai-nghe-s756.jpg",
-    "extension//hiep11//Tai nghe Bluetooth Dacom P10//DACOM//null//599//Các dòng máy hỗ trợ Bluetooth 3.0 trở lên//16-8-2019//12//gomhang.vn/images/stories/virtuemart/product/avatar-(10).jpg",
+    "extension//hiep11//Tai nghe Bluetooth Dacom P10//DACOM//null//599//Các dòng máy hỗ trợ Bluetooth 3.0 trở lên//16-8-2019//12//songlongmedia.com/media/product/516_dacom_p10_red.jpg",
     "extension//hiep12//Tai nghe AKG N28 chính hãng//SAMSUNG//nhựa cứng//649//Tất cả các dòng máy có jack 3.5mm//15-7-2019//12//gomhang.vn/images/stories/virtuemart/product/Akg-n28a.jpg",
     "extension//hiep13//Tai nghe Bluetooth Remax TWS-5//Remax//null//890//Các dòng máy hỗ trợ Bluetooth 3.0 trở lên//9-2-2019//12//gomhang.vn/images/stories/virtuemart/product/tai-nghe-bluetooth-remax-tws-5.jpg",
     "extension//hiep14//Tai nghe Bluetooth Bluedio TN//Bluedio//nhựa//589//Các dòng máy hỗ trợ Bluetooth 3.0 trở lên//25-5-2019//12//gomhang.vn/images/stories/virtuemart/product/!bluedio-ava75.jpg",
