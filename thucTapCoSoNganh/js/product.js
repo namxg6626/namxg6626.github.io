@@ -31,7 +31,7 @@ class SmartphoneStuff extends Product {
         let date = new Date();
         let dateArray = date.toISOString().slice(0, 10).split('-').map(element => parseInt(element));
         let currentD = dateArray[2],
-            currentM = dateArray[1],
+            currentM = dateArray[1],   
             currentY = dateArray[0];
         let mfgDateArray = this._mfgDate.split('-').map(element => parseInt(element));
         let mfgD = mfgDateArray[0],
