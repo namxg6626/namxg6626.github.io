@@ -1,0 +1,40 @@
+.content {
+    & > * {
+        margin-top: 1rem;
+        border: 1px solid #dedede;
+        border-radius: 8px;
+    }
+    &__detail {
+        display: flex;
+        max-width: 96rem;
+        margin: 0 auto;
+        padding: 3rem;
+        justify-content: space-between;
+        margin-top: 1rem;
+
+        .detail__image {
+            background-position-x: center;
+            background-position-y: center;
+            background-size: cover;
+            width: 24%;
+            height: 300px;
+        }
+        .detail__infor {
+            width: 74%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            #name {
+                color: #595959;
+                font-size: 2.5rem;
+            }
+            #id {
+                
+            }
+            .payment {
+                border: 1px solid #dedede;
+            }
+        }
+    }
+}
