@@ -150,6 +150,16 @@ $lightGreen: #79b260;
                     p {
                         color: #646464;
                         font-weight: 400;
+
+                        a {
+                            color: inherit;
+                            font-weight: inherit;
+                            text-decoration: none;
+                        }
+                        a:hover {
+                            text-decoration: underline;
+                            text-decoration-color: #646464;
+                        }
                     }
                     p + p {
                         color: red;

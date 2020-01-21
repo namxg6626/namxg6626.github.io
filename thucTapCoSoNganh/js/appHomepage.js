@@ -15,7 +15,7 @@ function displayPage(pageNumber) {
     for (let i = 0; i < productDetailArray.length; i++) {
         productDetailArray[i].querySelector('.image-product > div').style.backgroundImage = "url(" + listExtensionsData[(pageNumber - 1) * 12 + i].get("linkImage") + ")";
         let tmp = productDetailArray[i].querySelectorAll('p');
-        tmp[0].textContent = listExtensionsData[(pageNumber - 1) * 12 + i].get("name");
+        tmp[0].querySelector('a').textContent = listExtensionsData[(pageNumber - 1) * 12 + i].get("name");
         tmp[1].textContent = listExtensionsData[(pageNumber - 1) * 12 + i].get("price") + "K VNĐ";
         tmp[2].textContent = listExtensionsData[(pageNumber - 1) * 12 + i].get("id");
     }

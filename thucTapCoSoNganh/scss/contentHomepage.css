@@ -197,6 +197,18 @@
   font-weight: 400;
 }
 
+.content__product__table__list__element p a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.content__product__table__list__element p a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #646464;
+          text-decoration-color: #646464;
+}
+
 .content__product__table__list__element p + p {
   color: red;
   font-size: 1.6rem;
