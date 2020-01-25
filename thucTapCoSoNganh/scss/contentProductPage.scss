@@ -27,13 +27,57 @@
             
             #name {
                 color: #595959;
-                font-size: 2.5rem;
+                font-size: 2.4rem;
             }
             #id {
-                
+                color: #595959;
+                margin: 1rem 0 0 0;
             }
             .payment {
                 border: 1px solid #dedede;
+                padding: 1.5rem 3rem;
+
+                .price-tag {
+                    color: #015699;
+                    font-size: 2.5rem;
+                    font-weight: 500;
+
+                    span {
+                        color: #e45858;
+                        font-size: inherit;
+                        font-weight: inherit;
+                    }
+                }
+                .note {
+                    color: #939292;
+                    font-size: 1.3rem;
+                }
+                button {
+                    font-weight: 600;
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                    font-size: 1.7rem;
+                    padding: 1rem 2rem;
+                    border: 1px solid transparent;
+                    background: linear-gradient(bottom, #79b260, #92d774);
+                    color: white;
+                }
+                .container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 0;
+                }
+                hr {
+                    border: none;
+                    border-bottom: 1px solid #dedede;
+                    margin: 3rem 0 0.7rem 0;
+                }
+                img {
+                    display: inline-block;
+                    width: 30px;
+                    margin: 4px 2px 0 0;
+                    border-radius: 4px;
+                }
             }
         }
     }
