@@ -39,12 +39,12 @@
           justify-content: space-between;
 }
 
-.content__detail .detail__infor #name {
+.content__detail .detail__infor .name {
   color: #595959;
   font-size: 2.4rem;
 }
 
-.content__detail .detail__infor #id {
+.content__detail .detail__infor .id {
   color: #595959;
   margin: 1rem 0 0 0;
 }

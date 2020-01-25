@@ -32,8 +32,3 @@ function switchTab(evt) {
     evt.currentTarget.classList.add('selected');
     displayPage(parseInt(evt.currentTarget.textContent));
 }
-
-function storeInfor(e) {
-    let id = e.currentTarget.offsetParent.querySelectorAll('p')[2].textContent;
-    console.log(id);
-}
