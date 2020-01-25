@@ -15,7 +15,9 @@ function displayPage(pageNumber) {
     for (let i = 0; i < productDetailArray.length; i++) {
         productDetailArray[i].querySelector('.image-product > div').style.backgroundImage = "url(" + listExtensionsData[(pageNumber - 1) * 12 + i].get("linkImage") + ")";
         let tmp = productDetailArray[i].querySelectorAll('p');
-        tmp[0].textContent = listExtensionsData[(pageNumber - 1) * 12 + i].get("name");
+        let link = tmp[0].querySelector('a');
+        link.textContent = listExtensionsData[(pageNumber - 1) * 12 + i].get("name");
+        link.setAttribute("href","ProductPage.html#" + ((pageNumber - 1) * 12 + i));
         tmp[1].textContent = listExtensionsData[(pageNumber - 1) * 12 + i].get("price") + "K VNĐ";
         tmp[2].textContent = listExtensionsData[(pageNumber - 1) * 12 + i].get("id");
     }
@@ -29,4 +31,9 @@ function switchTab(evt) {
         element.classList.remove('selected');
     evt.currentTarget.classList.add('selected');
     displayPage(parseInt(evt.currentTarget.textContent));
+}
+
+function storeInfor(e) {
+    let id = e.currentTarget.offsetParent.querySelectorAll('p')[2].textContent;
+    console.log(id);
 }
