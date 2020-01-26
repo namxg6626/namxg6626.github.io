@@ -1,22 +1,20 @@
-// search and display data of product by its index
+// get data of product by its index
 let currentURL = window.location.href;
-let index = currentURL.split('#')[1];
-let currentProduct = listExtensionsData[index]; // an Object - product obj
+let index = parseInt(currentURL.split('#')[1]);
+let currentProduct = listExtensionsData[index]; // an Object
 
 // define a weirdly function :)
 function doSmt(arr, action) {
     let result = [];
-    for (element of arr)
-        result.push(action(element));
+    for (let element of arr)
+    result.push(action(element));
     // get its new data when necessary
     return result;
 }
 
-let dataComponent = document.querySelector('.detail__infor');
-let nameNodes = dataComponent.querySelectorAll('.name'),
-    idNodes = dataComponent.querySelectorAll('.id'),
-    priceNodes = dataComponent.querySelectorAll('.price')
+for (let prop in currentProduct) {
+    prop = prop.slice(1, prop.length);
+    doSmt(document.getElementsByClassName(prop), e => { e.textContent += currentProduct.get(prop) });
+}
 
-doSmt(nameNodes, e => { e.textContent = currentProduct.get("name") });
-doSmt(idNodes, e => { e.textContent = currentProduct.get("id") });
-doSmt(priceNodes, e => { e.textContent = currentProduct.get("price") + "K VND" });
+document.querySelector('.detail__image').style.backgroundImage = `url("${currentProduct.get("linkImage")}")`;
