@@ -1,6 +1,6 @@
 // get data of product by its index
 let currentURL = window.location.href;
-let index = parseInt(currentURL.split('#')[1]);
+let index = currentURL.split('#')[1];
 let currentProduct = listExtensionsData[index]; // an Object
 
 // define a weirdly function :)
