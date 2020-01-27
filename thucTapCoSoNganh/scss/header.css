@@ -1,3 +1,7 @@
+:root {
+  --toggle-cart: none;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -25,7 +29,7 @@ body {
 
 .wrapper::after {
   /* cover all component when open the cart, use js here */
-  content: attr(data-content);
+  content: var(--toggle-cart);
   height: 100%;
   width: 100%;
   position: absolute;
@@ -126,8 +130,8 @@ body {
   font-weight: 500;
 }
 
-.header__tool-bar__cart span {
-  font-size: 1.5rem;
+.header__tool-bar__cart i + span {
+  font-size: 1.5rem !important;
 }
 
 .header__tool-bar__cart p > i {
@@ -148,7 +152,7 @@ body {
           justify-content: space-between;
 }
 
-.header__tool-bar__cart a {
+.header__tool-bar__cart #show-cart {
   background: -webkit-gradient(linear, left bottom, left top, from(#252525), to(#414141));
   background: linear-gradient(bottom, #252525, #414141);
   border-radius: 2px;
@@ -156,6 +160,7 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 400;
+  cursor: pointer;
 }
 
 .header__tool-bar__wish {

@@ -32,3 +32,7 @@ function switchTab(evt) {
     evt.currentTarget.classList.add('selected');
     displayPage(parseInt(evt.currentTarget.textContent));
 }
+
+function showCart(e) {
+    document.documentElement.style.setProperty("--toggle-cart", `""`);
+}
