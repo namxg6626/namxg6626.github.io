@@ -20,24 +20,3 @@ for (let prop in currentProduct) {
     prop = prop.slice(1, prop.length);
     doSmt(document.getElementsByClassName(prop), e => { e.textContent += currentProduct.get(prop) });
 }
-
-
-
-// Cart
-let itemQuantity = document.getElementById('item-quantity');
-let myCart = window.localStorage.getItem('cart');
-if (myCart == null)
-    myCart = new Cart();
-
-function showCart(e) {
-    document.documentElement.style.setProperty("--toggle-cart", `""`);
-}
-
-function addToCart(e) {
-    myCart.add(currentProduct);
-    itemQuantity.textContent = "(" + myCart.get('items').length + " items)";
-    console.clear();
-    console.log(myCart.get("items"));
-    window.localStorage.removeItem('cart');
-    window.localStorage.setItem('cart', JSON.stringify(myCart));
-}
