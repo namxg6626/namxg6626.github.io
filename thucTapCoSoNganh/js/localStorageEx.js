@@ -10,3 +10,4 @@ localStorage.setItem('myObj', myJSON)
 let text = localStorage.getItem('myObj');
 let myObj = JSON.parse(text);
 console.log(text);
+console.log(myObj);

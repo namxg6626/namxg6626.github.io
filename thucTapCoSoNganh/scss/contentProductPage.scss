@@ -92,6 +92,11 @@
         p {
             padding: 10px 0;
             border-bottom: 1px solid #EEEEEE;
+            font-weight: 600;
+
+            span {
+                font-weight: lighter;
+            }
         }
     }
 }

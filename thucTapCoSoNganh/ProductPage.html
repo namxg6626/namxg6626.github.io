@@ -36,7 +36,7 @@
                         </form>
                     </div>
                     <div class="header__tool-bar__cart">
-                        <p> <i class="fas fa-shopping-cart"></i> Giỏ hàng <span>(2 items)</span></p>
+                        <p> <i class="fas fa-shopping-cart"></i> Giỏ hàng <span id="item-quantity">(0 items)</span></p>
                         <p>$125.0 <span id="show-cart" onclick="showCart(event)">Xem trước</span> </p>
                     </div>
                     <div class="header__tool-bar__wish">
@@ -77,7 +77,7 @@
                                 <p class="price-tag">Giá bán: <span class="price"></span><span>K VND</span></p>
                                 <p class="note">Đã bao gồm thuế VAT</p>
                             </section>
-                            <button type="button">Thêm vào giỏ</button>
+                            <button type="button" onclick="addToCart(event)">Thêm vào giỏ</button>
                         </div>
                         <hr>
                         <p class="note"><i class="fas fa-lock"></i> Bảo mật, Mua sắm an toàn</p>
@@ -89,14 +89,14 @@
             </div>
             <div class="specification content__detail">
                 <section>
-                    <h2>Chi tiết sản phẩm</h2>
-                    <p class="name">Tên sản phẩm: </p>
-                    <p class="id">ID sản phẩm: </p>
-                    <p class="material">Chất liệu: </p>
-                    <p class="brand">Hãng sản xuất: </p>
-                    <p class="mfgDate">Ngày ra mắt: </p>
-                    <p class="warranty">Bảo hành: </p>
-                    <p class="compatibility">Khả năng tương thích: </p>
+                    <h2>MÔ TẢ SẢN PHẨM</h2>
+                    <p>Tên sản phẩm: <span class="name"></span> </p>
+                    <p>ID sản phẩm: <span class="id"></span></p>
+                    <p>Chất liệu: <span class="material"></span></p>
+                    <p>Hãng sản xuất: <span class="brand"></span></p>
+                    <p>Ngày ra mắt: <span class="mfgDate"></span></p>
+                    <p>Bảo hành: <span class="warranty"></span></p>
+                    <p>Khả năng tương thích: <span class="compatibility"></span></p>
                 </section>
             </div>
         </div>

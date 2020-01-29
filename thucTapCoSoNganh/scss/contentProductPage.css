@@ -122,5 +122,10 @@
 .content .specification p {
   padding: 10px 0;
   border-bottom: 1px solid #EEEEEE;
+  font-weight: 600;
+}
+
+.content .specification p span {
+  font-weight: lighter;
 }
 /*# sourceMappingURL=contentProductPage.css.map */
