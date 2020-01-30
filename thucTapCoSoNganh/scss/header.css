@@ -150,6 +150,12 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: 5px;
+}
+
+.header__tool-bar__cart #total {
+  font-size: 1.9rem;
+  font-weight: 500;
 }
 
 .header__tool-bar__cart #show-cart {

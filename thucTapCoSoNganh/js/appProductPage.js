@@ -18,5 +18,7 @@ function doSmt(arr, action) {
 // show specification of product
 for (let prop in currentProduct) {
     prop = prop.slice(1, prop.length);
-    doSmt(document.getElementsByClassName(prop), e => { e.textContent += currentProduct.get(prop) });
+    doSmt(document.getElementsByClassName(prop), e => { 
+        currentProduct.get(prop) == "null" ? e.textContent = "Chưa rõ thông tin" : e.textContent = currentProduct.get(prop);
+    });
 }

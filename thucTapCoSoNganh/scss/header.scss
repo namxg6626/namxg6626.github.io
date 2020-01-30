@@ -120,6 +120,12 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                margin-top: 5px;
+            }
+            #total {
+                font-size: 1.9rem;
+                font-weight: 500;
+                // color: black;
             }
             #show-cart {
                 background: linear-gradient(bottom, #252525, #414141);
