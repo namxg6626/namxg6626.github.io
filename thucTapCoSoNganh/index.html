@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
     <title>Homepage</title>
     <link rel="stylesheet" href="scss/header.css">
     <link rel="stylesheet" href="./scss/contentHomepage.css">
@@ -39,7 +42,7 @@
                     </div>
                     <div class="header__tool-bar__cart">
                         <p> <i class="fas fa-shopping-cart"></i> Giỏ hàng <span id="item-quantity">(0 items)</span></p>
-                        <p>$125.0 <span id="show-cart" onclick="showCart(event)">Xem trước</span> </p>
+                        <p><span id="total">0 VND</span> <span id="show-cart" onclick="showCart(event)">Xem trước</span> </p>
                     </div>
                     <div class="header__tool-bar__wish">
                         <p><i class="fas fa-star"></i></p>
@@ -245,6 +248,16 @@
             </div>
         </div>
     </div>
+    <button name="remove-cart" onclick="removeCart(event)" style="padding: 10px; z-index: 999; position: fixed; bottom: 40px; right: 40px; background: grey; color: white; border: none; cursor: pointer;">
+        <script>
+            function removeCart(e) {
+                window.localStorage.removeItem('cart');
+                window.alert('Cart was cleared');
+                window.location.reload();
+            }
+        </script>
+        remove-cart
+    </button>
     <script src="./js/cart.js"></script>
     <script src="js/appHomepage.js"></script>    
     <script src="https://kit.fontawesome.com/7a3d33f3e2.js" crossorigin="anonymous"></script>
