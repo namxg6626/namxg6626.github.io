@@ -8,7 +8,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />  
    ```
-   2. add .htaccess file in your root directory with these code below
+   2. add .htaccess file in your web root directory with these code below
    ```.htaccess
    # DISABLE CACHING
    <IfModule mod_headers.c>
