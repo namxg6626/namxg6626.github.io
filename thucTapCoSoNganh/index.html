@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- <script src="https://kit.fontawesome.com/7a3d33f3e2.js" crossorigin="anonymous"></script> -->
     <!-- import list datas -->
-    <script src="./js/product.js"></script>
+    <script src="./js/objects.js"></script>
     <script src="./js/data.js"></script>
 </head>
 
@@ -42,8 +42,8 @@
                         </form>
                     </div>
                     <div class="header__tool-bar__cart">
-                        <p> <i class="fas fa-shopping-cart"></i> Giỏ hàng <span id="item-quantity">(0 items)</span></p>
-                        <p><span id="total">0 VND</span> <span id="show-cart" onclick="showCart(event)">Xem trước</span> </p>
+                        <p> <i class="fas fa-shopping-cart"></i> Giỏ hàng <span id="items-quantity">(0 items)</span></p>
+                        <p><span id="total">0 VND</span> <a href="customerCart.html" id="show-cart" onclick="showCart(event)">Xem trước</a> </p>
                     </div>
                     <div class="header__tool-bar__wish">
                         <p><i class="fas fa-star"></i></p>
@@ -259,7 +259,7 @@
         </script>
         remove-cart
     </button>
-    <script src="./js/cart.js"></script>
+    <script src="./js/cartData.js"></script>
     <script src="js/appHomepage.js"></script>    
     <script src="https://kit.fontawesome.com/7a3d33f3e2.js" crossorigin="anonymous"></script>
 </body>
