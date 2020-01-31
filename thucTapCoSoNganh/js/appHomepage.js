@@ -34,5 +34,5 @@ function switchTab(evt) {
 }
 
 function showCart(e) {
-    document.documentElement.style.setProperty("--toggle-cart", `""`);
+    // document.documentElement.style.setProperty("--toggle-cart", `""`);
 }
