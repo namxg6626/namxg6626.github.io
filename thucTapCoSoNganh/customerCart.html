@@ -8,7 +8,7 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
-    <title>Homepage</title>
+    <title>Giỏ hàng</title>
     <link rel="stylesheet" href="scss/header.css">
     <link rel="stylesheet" href="./scss/contentHomepage.css">
     <link rel="stylesheet" href="./scss/footer.css">
@@ -42,7 +42,8 @@
                         </form>
                     </div>
                     <div class="header__tool-bar__cart">
-                        <p> <i class="fas fa-shopping-cart"></i> Giỏ hàng <span class="items-quantity" id="items-quantity">(0 items)</span></p>
+                        <p> <i class="fas fa-shopping-cart"></i> Giỏ hàng <span class="items-quantity"
+                                id="items-quantity">(0 items)</span></p>
                         <p><span class="total" id="total">0 VND</span> <a href="customerCart.html" id="show-cart"
                                 onclick="showCart(event)">Xem trước</a> </p>
                     </div>
@@ -68,16 +69,25 @@
                 </div>
             </nav>
         </div>
-        <div class="cart-box">
-            <p class="items-quantity">0</p>
-            <p class="total">0</p>
-            <div class="item">
-                <div class="linkImage"></div>
-                <a href="#" class="name"></a>
-                <p class="id"></p>
-                <p class="price"></p>
-                <input type="text" class="quantity">
-            </div>
+        <div class="cart-box" style="margin: 0 auto; max-width: 99rem;">
+            <!--use js here. code below is a pattern-->
+            <!-- <div class="item">
+                <div class="linkImage" style="background-image: url('#'); height: 150px; width: 120px; background-position: center; background-size: cover;"></div>
+                <section>
+                    <a href="#" class="name">name: </a>
+                    <p class="id">id: </p>
+                </section>
+                <section>
+                    <p class="price">price: $10</p>
+                    <button>bớt</button>
+                    <input type="text" class="quantity" value="0">
+                    <button>thêm</button>
+                </section>
+            </div> -->
+            <section>
+                <p class="items-quantity">0</p>
+                <p class="total">0</p>
+            </section>
         </div>
         <div class="footer noise">
             <div class="container">
