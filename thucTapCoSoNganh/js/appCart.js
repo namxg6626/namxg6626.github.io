@@ -40,7 +40,7 @@ let changeQuantityByIndex = (e, index, number) => {
         console.log(myCart._items);
         itemQuantity.value = parseInt(itemQuantity.value) + number;
     }
-    window.localStorage.setItem('cart', JSON.stringify(myCart));
+    window.localStorage.setItem('cart', JSON.stringify(myCart._items));
     myCart._items = JSON.parse(window.localStorage.getItem('cart'));
     console.log(myCart.groupByName());
     updateHeaderCart();
