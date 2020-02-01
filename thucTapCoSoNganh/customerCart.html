@@ -22,7 +22,6 @@
 <body>
     <div class="wrapper">
         <div class="header">
-
             <div class="header__status">
                 <div class="container">
                     <a href="#">Sign in</a>
@@ -76,12 +75,13 @@
                 <section>
                     <a href="#" class="name">name: </a>
                     <p class="id">id: </p>
+                    <button onclick="deleteByIndex(event)">xóa</button>
                 </section>
                 <section>
                     <p class="price">price: $10</p>
-                    <button>bớt</button>
+                    <button onclick="changeQuantity(event, -1)">bớt</button>
                     <input type="text" class="quantity" value="0">
-                    <button>thêm</button>
+                    <button onclick="changeQuantity(event, 1)">thêm</button>
                 </section>
             </div> -->
             <section>

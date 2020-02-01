@@ -1,8 +1,9 @@
 class Product {
-    constructor(id, name, price) {
+    constructor(id, name, price, index = 0) {
         this._id = id;
         this._name = name;
         this._price = price;
+        this._index = index;
     }
     get(property) {
         property = '_' + property;
@@ -15,8 +16,8 @@ class Product {
 }
 
 class SmartphoneStuff extends Product {
-    constructor(id, name, brand, material, price, mfgDate, warranty, linkImage = null) {
-        super(id, name, price);
+    constructor(id, name, brand, material, price, mfgDate, warranty, linkImage = null, index) {
+        super(id, name, price, index);
         this._material = material;
         this._brand = brand;
         this._mfgDate = mfgDate;
@@ -53,8 +54,8 @@ class SmartphoneStuff extends Product {
 }
 
 class Extension extends SmartphoneStuff {
-    constructor(id, name, brand, material, price, compatibility, mfgDate = null, warranty = null, linkImage = null) {
-        super(id, name, brand, material, price, mfgDate, warranty, linkImage);
+    constructor(id, name, brand, material, price, compatibility, mfgDate = null, warranty = null, linkImage = null, index) {
+        super(id, name, brand, material, price, mfgDate, warranty, linkImage, index);
         this._compatibility = compatibility;
     }
 }

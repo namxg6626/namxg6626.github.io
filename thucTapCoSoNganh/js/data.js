@@ -82,10 +82,12 @@ let listProductsRawData = [
     "extension//ducanh31//Cáp 3 đầu Lightning Type C Micro 1m eValu Spanker B Xanh Biển//null//Nhựa dẻo//200//Smart phone//15-11-2019//2//i.imgur.com/uqu1nbM.jpg",
 ]
 let listExtensionsData = [];
+let index = 0;
 for (let element of listProductsRawData) {
     element = element.split("//");
     element[9] = "http://" + element[9];
     if (element[0] == "extension")
-        listExtensionsData.push(new Extension(element[1], element[2], element[3], element[4], element[5], element[6], element[7], element[8], element[9]));
+        listExtensionsData.push(new Extension(element[1], element[2], element[3], element[4], element[5], element[6], element[7], element[8], element[9], index));
+    index++;
 }
 console.log(listExtensionsData);

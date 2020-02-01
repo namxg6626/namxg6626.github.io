@@ -13,8 +13,9 @@ for (let element of groupByName)
     `<div class="item">
         <div class="linkImage" style="background-image: url('${element._item._linkImage}'); height: 150px; width: 120px; background-position: center; background-size: cover;"></div>
         <section>
-            <a href="#" class="name">name: ${element._item._name}</a>
+            <a href="ProductPage.html#${element._item._index}" class="name">name: ${element._item._name}</a>
             <p class="id">id: ${element._item._id}</p>
+            <button onclick="deleteByIndex()">xóa</button>
         </section>
         <section>
             <p class="price">price: ${element._item._price}</p>
