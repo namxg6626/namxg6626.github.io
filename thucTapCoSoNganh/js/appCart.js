@@ -16,9 +16,11 @@ let changeQuantityByIndex = (e, index, number) => {
     let itemQuantity = currentItem.querySelector('input');
     if (button.name == "delete" || itemQuantity.value == 0) {
         for (let i = 0; i < myCart._items.length; i++)
-            if (myCart._items[i]._index = index) {
-                myCart._items.splice(i, number);
-                break;
+            if (myCart._items[i]._index == index) {
+                for (let j = i; j < myCart._items.length; j++)
+                    myCart._items[j] = myCart._items[j + 1];
+                myCart._items.pop();
+                i -= 1;
             }
         currentItem.style.setProperty('display', 'none');
         console.log('gotcha!');
@@ -40,8 +42,7 @@ let changeQuantityByIndex = (e, index, number) => {
         console.log(myCart._items);
         itemQuantity.value = parseInt(itemQuantity.value) + number;
     }
-    window.localStorage.setItem('cart', JSON.stringify(myCart._items));
-    myCart._items = JSON.parse(window.localStorage.getItem('cart'));
+    window.localStorage.setItem('cart', JSON.stringify(myCart));
     console.log(myCart.groupByName());
     updateHeaderCart();
 }
