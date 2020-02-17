@@ -1,0 +1,15 @@
+.status {
+  text-align: center;
+}
+
+.status .location-name {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.status .temperature {
+  font-size: 5rem;
+  font-weight: 400;
+}
+/*# sourceMappingURL=header.css.map */

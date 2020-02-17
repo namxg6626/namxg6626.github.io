@@ -1,0 +1,77 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.webpage {
+  width: 100%;
+  max-width: 360px;
+  height: 100vh;
+  padding: 10px 25px;
+  margin: 0 auto;
+}
+
+.search-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px 0;
+}
+
+.search-box input {
+  width: 90%;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border: 0;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+.status {
+  text-align: center;
+}
+
+.status .name {
+  text-transform: capitalize;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.status .temperature {
+  font-size: 5rem;
+  margin: 20px 0;
+}
+
+.status .today {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.status .today .wday {
+  font-size: 1.5rem;
+  font-weight: lighter;
+}
+
+.status .today .wday span, .status .today .weather {
+  font-weight: 500;
+  font-size: 1rem;
+}
+/*# sourceMappingURL=global.css.map */

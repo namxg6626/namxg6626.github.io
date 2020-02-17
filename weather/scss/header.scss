@@ -1,0 +1,17 @@
+.status-box {
+    
+}
+
+.status {
+    text-align: center;
+
+    .location-name {
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 600;
+    }
+    .temperature {
+        font-size: 5rem;
+        font-weight: 400;
+    }
+}
