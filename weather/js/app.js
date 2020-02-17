@@ -1,5 +1,5 @@
 "use strict";
-let cityName = 'bangkok';
+let cityName = 'thanh hóa';
 let lang = "vi";
 const _API_KEY = '3a52c53579e9e60d4e060982eb255fc2'; // key free =)), dang ky mien phi
 let _CURRENT_WEATHER = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${_API_KEY}&lang=${lang}`;
@@ -7,6 +7,7 @@ let _FORECAST_5DAYS_3HOURS = `https://api.openweathermap.org/data/2.5/forecast?q
 let _TIME_BASE_ON_IP = "http://worldtimeapi.org/api/ip";
 let forecast = {};
 let current = {};
+let unixTime = Math.ceil(Date.now() / 1000);
 
 displayCurrentData().catch(error => console.error(error));
 
@@ -15,18 +16,23 @@ async function displayCurrentData() {
     console.log(current);
     let status = {
         name: current.name,
-        temperature: Math.round(current.main.temp) + '℃',
+        temperature: Math.round(current.main.temp),
         wday: getDayInWeek(
             await getDataFromServer(_TIME_BASE_ON_IP)
-                .then(result => result.day_of_week)
+                .then(result => { 
+                    console.log(result);
+                    return result.day_of_week; 
+                })
                 .catch(error => console.log(error))
         ),
         weather: current.weather[0].description.charAt(0).toUpperCase() + current.weather[0].description.slice(1),
+        icon: current.weather[0].icon
     }
     for (let e in status)
-        document.querySelectorAll('.' + e).forEach(element => {
+        document.querySelectorAll('.current-weather .' + e).forEach(element => {
             element.textContent = status[e];
         });
+    document.querySelector('.current-weather img').setAttribute('src', `https://openweathermap.org/img/wn/${status.icon}@2x.png`)
     return current;
 }
 

@@ -14,17 +14,24 @@
 <body>
     <div class="webpage">
         <div class="search-box">
-            <input type="search" name="search-box" id="search-box" placeholder="Nhập tên tỉnh/thành phố. Ví dụ: Hà Nội">
+            <form action="#" method="post">
+                <input type="search" name="search-box" id="search-box"
+                    placeholder="Nhập tên tỉnh/thành phố. Ví dụ: Hà Nội">
+            </form>
         </div>
-        <div class="status-box">
+        <div class="current-weather">
             <div class="status">
                 <p class="name">Fetching...</p>
                 <p class="temperature">Fetching...</p>
+                <img src="https://openweathermap.org/img/wn/" alt="weather">
                 <div class="today">
                     <p class="wday">Fetching...</p>
                     <p class="weather">Fetching...</p>
                 </div>
             </div>
+        </div>
+        <div class="forecast-in-day">
+
         </div>
     </div>
 </body>
