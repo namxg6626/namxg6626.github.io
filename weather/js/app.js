@@ -14,7 +14,7 @@ let current = {};
 refreshData()
     .catch(error => {
         alert('Có lỗi xảy ra hoặc tên tỉnh không tồn tại');
-        location.href = location.href.split('?')[0];
+        // location.href = location.href.split('?')[0];
     });
 
 // define function
