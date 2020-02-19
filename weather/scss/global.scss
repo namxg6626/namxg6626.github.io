@@ -24,17 +24,32 @@ body {
   justify-content: center;
   margin: 20px 0;
   form {
-    width: 90%;
-    margin: 0 auto;
-  }
-  input {
     width: 100%;
-    margin: 0 auto;
-    padding: 5px 10px;
-    border: 0;
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    input {
+      border: 0;
+      border: 1px solid #ccc;
+      padding: 5px 10px;
+      border-radius: 0.5rem;
+    }
+    #search-box {
+      width: 75%;
+    }
+    #search-button {
+      width: 24%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    #search-box::after {
+      content: "";
+    }
   }
+}
+
+.current-weather {
+  margin-bottom: 10px;
 }
 
 .status {
@@ -71,4 +86,36 @@ body {
       font-size: 1rem;
     }
   }
+}
+.forecast-in-day {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+
+  .column {
+    * {
+      text-align: center;
+      font-weight: 600;
+      // width: max-content;
+    }
+    img {
+      margin: 0 auto;
+      width: 95%
+    }
+  }
+  // .column:first-child {
+  //   margin-left: -10px
+  // }
+  // .column:last-child {
+  //   margin-right: -10px
+  // }
+}
+.forecast-in-day::before {
+  content: "Theo giờ";
+  font-weight: 600;
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 2px;
 }

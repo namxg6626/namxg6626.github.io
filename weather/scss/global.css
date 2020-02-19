@@ -31,17 +31,38 @@ body {
 }
 
 .search-box form {
-  width: 90%;
-  margin: 0 auto;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.search-box input {
-  width: 100%;
-  margin: 0 auto;
-  padding: 5px 10px;
+.search-box form input {
   border: 0;
   border: 1px solid #ccc;
+  padding: 5px 10px;
   border-radius: 0.5rem;
+}
+
+.search-box form #search-box {
+  width: 75%;
+}
+
+.search-box form #search-button {
+  width: 24%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.search-box form #search-box::after {
+  content: "";
+}
+
+.current-weather {
+  margin-bottom: 10px;
 }
 
 .status {
@@ -87,5 +108,35 @@ body {
 .status .today .wday span, .status .today .weather {
   font-weight: 500;
   font-size: 1rem;
+}
+
+.forecast-in-day {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-top: 40px;
+}
+
+.forecast-in-day .column * {
+  text-align: center;
+  font-weight: 600;
+}
+
+.forecast-in-day .column img {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.forecast-in-day::before {
+  content: "Theo giờ";
+  font-weight: 600;
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 2px;
 }
 /*# sourceMappingURL=global.css.map */
