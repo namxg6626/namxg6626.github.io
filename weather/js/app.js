@@ -4,7 +4,7 @@ let lang = "vi";
 const _API_KEY = '3a52c53579e9e60d4e060982eb255fc2'; // key free =)), dang ky mien phi
 let _CURRENT_WEATHER = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${_API_KEY}&lang=${lang}`;
 let _FORECAST_5DAYS_3HOURS = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&appid=${_API_KEY}&lang=${lang}`; // cnt indicates number of forecasts (optional)
-let _TIME_BASE_ON_IP = "http://worldtimeapi.org/api/ip";
+let _TIME_BASE_ON_IP = "https://worldtimeapi.org/api/ip";
 let forecasts = [];
 let current = {};
 // let unixTime = Math.ceil(Date.now() / 1000); // Date.now(): millisecond
