@@ -10,11 +10,11 @@ let current = {};
 // let unixTime = Math.ceil(Date.now() / 1000); // Date.now(): millisecond
 // console.log(Date(1582120919*1000))
 
-// userSearch();
+userSearch();
 refreshData()
     .catch(error => {
         alert('Có lỗi xảy ra hoặc tên tỉnh không tồn tại');
-        // location.href = location.href.split('?')[0];
+        location.href = location.href.split('?')[0];
     });
 
 // define function
