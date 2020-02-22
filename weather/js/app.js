@@ -13,7 +13,7 @@ refreshData()
     // .then(resolve => console.clear())
     .catch(error => {
         alert('Có lỗi xảy ra hoặc tên tỉnh không tồn tại');
-        // location.href = location.href.split('?')[0];
+        location.href = location.href.split('?')[0];
         console.log(error)
     });
 
