@@ -7,14 +7,14 @@ let _FORECAST_5DAYS_3HOURS = `https://api.openweathermap.org/data/2.5/forecast?q
 let _TIME_BASE_ON_IP = "https://worldtimeapi.org/api/ip";
 let forecasts = [];
 let current = {};
-// let unixTime = Math.ceil(Date.now() / 1000); // Date.now(): millisecond
-// console.log(Date(1582120919*1000))
+let isUserSearch = userSearch();
 
-userSearch();
 refreshData()
+    // .then(resolve => console.clear())
     .catch(error => {
         alert('Có lỗi xảy ra hoặc tên tỉnh không tồn tại');
-        location.href = location.href.split('?')[0];
+        // location.href = location.href.split('?')[0];
+        console.log(error)
     });
 
 // define function
@@ -37,10 +37,20 @@ function userSearch() {
 async function refreshData() {
     current = await getDataFromServer(_CURRENT_WEATHER);
     forecasts = await getDataFromServer(_FORECAST_5DAYS_3HOURS);
-    let weekday = await getDataFromServer(_TIME_BASE_ON_IP).then(result => result.day_of_week);
+    // GMT+00:00
+    let timeBaseOnIP = await getDataFromServer(_TIME_BASE_ON_IP);
+    let GMTInUnixTime = timeBaseOnIP.unixtime - timeBaseOnIP.raw_offset
+    let weekday;
+    
+    if (isUserSearch) {
+        let dateAtTheCitySearched = new Date(Math.floor(GMTInUnixTime + current.timezone) * 1000);
+        weekday = dateAtTheCitySearched.toString().split(' ')[0];
+    } else {
+        weekday = timeBaseOnIP.day_of_week;
+    }
+    // add weekday property into current weather object
     current.weekday = getWeekday(weekday);
     console.log(current, forecasts);
-    console.log(weekday);
     displayCurrentWeather(current);
     displayForecastInDay(forecasts.list);
 }
@@ -87,35 +97,40 @@ function refreshAPI(newCityName = 'Hà Nội', newLang = "vi", newAPIKey = _API_
 }
 
 function getWeekday(dayOfWeek) {
+    let cases;
+    if ((typeof dayOfWeek) === "string")
+        cases = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    else cases = [0, 1, 2, 3, 4, 5, 6]
+    console.log(typeof dayOfWeek)
     switch (dayOfWeek) {
-        case 1:
-            if (lang === "vi")
-                return "Thứ 2";
-            else return "Monday";
-        case 2:
-            if (lang === "vi")
-                return "Thứ 3";
-            else return "Tuesday";
-        case 3:
-            if (lang === "vi")
-                return "Thứ 4";
-            else return "Wednesday";
-        case 4:
-            if (lang === "vi")
-                return "Thứ 5";
-            else return "Thursday";
-        case 5:
-            if (lang === "vi")
-                return "Thứ 6";
-            else return "Friday";
-        case 6:
-            if (lang === "vi")
-                return "Thứ 7";
-            else return "Saturday";
-        case 7:
+        case cases[0]:
             if (lang === "vi")
                 return "Chủ nhật";
             else return "Sunday";
+        case cases[1]:
+            if (lang === "vi")
+                return "Thứ 2";
+            else return "Monday";
+        case cases[2]:
+            if (lang === "vi")
+                return "Thứ 3";
+            else return "Tuesday";
+        case cases[3]:
+            if (lang === "vi")
+                return "Thứ 4";
+            else return "Wednesday";
+        case cases[4]:
+            if (lang === "vi")
+                return "Thứ 5";
+            else return "Thursday";
+        case cases[5]:
+            if (lang === "vi")
+                return "Thứ 6";
+            else return "Friday";
+        case cases[6]:
+            if (lang === "vi")
+                return "Thứ 7";
+            else return "Saturday";
         default:
             break;
     }
