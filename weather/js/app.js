@@ -10,11 +10,19 @@ let current = {};
 let isUserSearch = userSearch();
 
 refreshData()
-    // .then(resolve => console.clear())
+    .then(resolve => {
+        document.querySelectorAll('svg').forEach(loader => {
+            loader.style.display = "none";
+        })
+        document.querySelectorAll('img').forEach(icon => {
+            icon.style.display = "block";
+        })
+    })
     .catch(error => {
-        alert('Có lỗi xảy ra hoặc tên tỉnh không tồn tại');
-        location.href = location.href.split('?')[0];
+        if(!isUserSearch)
+            alert('Có lỗi xảy ra khi tải trang');
         console.log(error)
+        returnDefaultPage();
     });
 
 // define function
@@ -27,7 +35,7 @@ function userSearch() {
             .then(result => refreshData())
             .catch(error => {
                 alert('Tên tỉnh không tồn tại');
-                cityName = "Hà Nội";
+                returnDefaultPage();
             })
         return true;
     }
@@ -43,8 +51,8 @@ async function refreshData() {
     let weekday;
     
     if (isUserSearch) {
-        let dateAtTheCitySearched = new Date(Math.floor(GMTInUnixTime + current.timezone) * 1000);
-        weekday = dateAtTheCitySearched.toString().split(' ')[0];
+        let dateAtTheSearchedCity = new Date(Math.floor(GMTInUnixTime + current.timezone) * 1000);
+        weekday = dateAtTheSearchedCity.toString().split(' ')[0];
     } else {
         weekday = timeBaseOnIP.day_of_week;
     }
@@ -77,6 +85,7 @@ function displayCurrentWeather(sourceData) {
         weather: sourceData.weather[0].description.charAt(0).toUpperCase() + sourceData.weather[0].description.slice(1),
         icon: sourceData.weather[0].icon
     }
+
     for (let e in status)
         document.querySelectorAll('.current-weather .' + e).forEach(element => {
             element.textContent = status[e];
@@ -134,4 +143,8 @@ function getWeekday(dayOfWeek) {
         default:
             break;
     }
+}
+
+function returnDefaultPage() {
+    location.href = location.href.split('?')[0]
 }

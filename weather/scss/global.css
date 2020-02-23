@@ -88,6 +88,15 @@ body {
   top: 0.7rem;
 }
 
+.status img {
+  margin: 0 auto;
+}
+
+.status svg {
+  width: 100px;
+  height: 100px;
+}
+
 .status .today {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,6 +139,11 @@ body {
 .forecast-in-day .column img {
   margin: 0 auto;
   width: 95%;
+}
+
+.forecast-in-day .column svg {
+  width: 80%;
+  height: 48px;
 }
 
 .forecast-in-day::before {
