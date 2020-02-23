@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buổi 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./basic.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div class="title">Hàm, rẽ nhánh, vòng lặp</div>
+            <div class="exercise-container">
+                <div class="exercise">
+                    <div class="question">
+                        <b>Yêu cầu:</b>
+                        <br>
+                        <p>Xây dựng hàm giải phương trình bậc 2.</p>
+                    </div>
+                    <div class="input-section">
+                        <form id="ptb2">
+                            <input type="number" id="varA">x² + <input type="number" id="varB">x + <input type="number" id="varC"> = 0
+                            <br>
+                            <button type="reset">Reset</button>
+                            <button type="button" onclick="ptb2()">Submit</button>
+                        </form>
+                    </div>
+                    <div class="result-section">
+                        <b>Kết quả: </b><span id="ptb2Result"></span>
+                    </div>
+                </div>
+                <div class="exercise">
+                    <div class="question">
+                        <b>Yêu cầu:</b>
+                        <br>
+                        <p>Nhập vào tháng, năm. In ra số ngày của tháng đó.</p>
+                    </div>
+                    <div class="input-section">
+                        <form>
+                            <label for="month">Month: </label><input type="number" id="month">
+                            <label for="year">Year: </label><input type="number" id="year">
+                            <br>
+                            <button type="reset">Reset</button>
+                            <button type="button" onclick="findDateOfMonth()">Submit</button>
+                        </form>
+                    </div>
+                    <div class="result-section">
+                        <b>Kết quả: </b><span id="dateResult"></span>
+                    </div>
+                </div>
+
+                <div class="exercise">
+                    <div class="question">
+                        <b>Yêu cầu:</b>
+                        <br>
+                        <p>Nhập vào 1 số nguyên n, yêu cầu xuất tất cả số nguyên tố từ 1 đến n (mỗi số cách 1 khoảng
+                            trắng), nếu không có số nào, xuất -1.</p>
+                    </div>
+                    <div class="input-section">
+                        <form>
+                            <label for="varN">Nhập N: </label><input type="number" id="varN">
+                            <br>
+                            <button type="reset">Reset</button>
+                            <button type="button" onclick="findSNT()">Submit</button>
+                        </form>
+                    </div>
+                    <div class="result-section">
+                        <b>Kết quả: </b><span id="sntResult"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
