@@ -7,6 +7,7 @@ let _FORECAST_5DAYS_3HOURS = `https://api.openweathermap.org/data/2.5/forecast?q
 let _TIME_BASE_ON_IP = "https://worldtimeapi.org/api/ip";
 let forecasts = [];
 let current = {};
+let timeBaseOnIP = {};
 let isUserSearch = userSearch();
 
 refreshData()
@@ -21,7 +22,7 @@ refreshData()
     .catch(error => {
         if(!isUserSearch)
             alert('Có lỗi xảy ra khi tải trang');
-        console.log(error)
+        // console.log(error)
         returnDefaultPage();
     });
 
@@ -43,10 +44,13 @@ function userSearch() {
 }
 
 async function refreshData() {
-    current = await getDataFromServer(_CURRENT_WEATHER);
-    forecasts = await getDataFromServer(_FORECAST_5DAYS_3HOURS);
-    // GMT+00:00
-    let timeBaseOnIP = await getDataFromServer(_TIME_BASE_ON_IP);
+    [current, forecasts, timeBaseOnIP] = await Promise.all([
+        getDataFromServer(_CURRENT_WEATHER),
+        getDataFromServer(_FORECAST_5DAYS_3HOURS),
+        getDataFromServer(_TIME_BASE_ON_IP),
+    ])
+    .catch(error => console.log(error));
+
     let GMTInUnixTime = timeBaseOnIP.unixtime - timeBaseOnIP.raw_offset
     let weekday;
     
@@ -58,7 +62,6 @@ async function refreshData() {
     }
     // add weekday property into current weather object
     current.weekday = getWeekday(weekday);
-    console.log(current, forecasts);
     displayCurrentWeather(current);
     displayForecastInDay(forecasts.list);
 }
@@ -110,7 +113,6 @@ function getWeekday(dayOfWeek) {
     if ((typeof dayOfWeek) === "string")
         cases = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     else cases = [0, 1, 2, 3, 4, 5, 6]
-    console.log(typeof dayOfWeek)
     switch (dayOfWeek) {
         case cases[0]:
             if (lang === "vi")
