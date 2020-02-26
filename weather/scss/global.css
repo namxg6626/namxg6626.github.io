@@ -16,7 +16,7 @@ body {
   width: 100%;
   max-width: 360px;
   height: 100vh;
-  padding: 10px 25px;
+  padding: 10px;
   margin: 0 auto;
 }
 
@@ -144,6 +144,46 @@ body {
 .forecast-in-day .column svg {
   width: 80%;
   height: 48px;
+}
+
+.forecast-in-day canvas {
+  background-color: white;
+  opacity: 0;
+  z-index: 999;
+  position: absolute;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.forecast-in-day .switch-button {
+  position: absolute;
+  width: 40px;
+  height: 22px;
+  border: 1px solid #ccc;
+  bottom: calc(100% + 10px);
+  right: 0;
+  border-radius: 15px;
+}
+
+.forecast-in-day .switch-button::before {
+  content: "";
+  display: block;
+  background: #666;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: absolute;
+  left: 0;
+}
+
+.forecast-in-day #toggle-chart:checked ~ .switch-button::before {
+  left: calc(100% - 20px);
+}
+
+.forecast-in-day input[name="toggle-chart"]:checked ~ canvas {
+  opacity: 100;
 }
 
 .forecast-in-day::before {

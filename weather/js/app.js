@@ -1,4 +1,6 @@
 "use strict";
+import createChart from './chart.js';
+
 let cityName = 'Hà Nội';
 let lang = "vi";
 const _API_KEY = '3a52c53579e9e60d4e060982eb255fc2'; // key free =)), dang ky mien phi
@@ -14,15 +16,15 @@ refreshData()
     .then(resolve => {
         document.querySelectorAll('svg').forEach(loader => {
             loader.style.display = "none";
-        })
+        });
         document.querySelectorAll('img').forEach(icon => {
             icon.style.display = "block";
-        })
+        });
     })
     .catch(error => {
         if(!isUserSearch)
             alert('Có lỗi xảy ra khi tải trang');
-        // console.log(error)
+        console.log(error)
         returnDefaultPage();
     });
 
@@ -62,25 +64,40 @@ async function refreshData() {
     }
     // add weekday property into current weather object
     current.weekday = getWeekday(weekday);
-    displayCurrentWeather(current);
-    displayForecastInDay(forecasts.list);
+    await Promise.all([
+        displayCurrentWeather(current),
+        displayForecastInDay(forecasts.list),
+    ])
+    .then(result => createChart(result[1].timestamp, result[1].tempArr, result[1].humidArr));
+    // displayCurrentWeather(current)
+    // displayForecastInDay(forecasts.list)
+    // createChart()
 }
 
-function displayForecastInDay(sourceData) {
-    let skip = 0;
+async function displayForecastInDay(sourceData) {
     let forecastInDay = document.querySelector('.forecast-in-day');
     let time = forecastInDay.querySelectorAll('.time');
     let icon = forecastInDay.querySelectorAll('img');
     let temperature = forecastInDay.querySelectorAll('.temperature');
+    let parsedData = {
+        timestamp: [],
+        tempArr: [],
+        humidArr: [],
+    };
 
     for (let i = 0; i < time.length; i++) {
-        time[i].textContent = parseInt(sourceData[i + skip].dt_txt.split(' ')[1].split(':')[0]) + 'h';
+        time[i].textContent = parseInt(sourceData[i].dt_txt.split(' ')[1].split(':')[0]) + 'h';
         icon[i].setAttribute('src', `https://openweathermap.org/img/wn/${sourceData[i].weather[0].icon}.png`)
         temperature[i].textContent = Math.round(sourceData[i].main.temp) + "°";
+        parsedData.timestamp.push(time[i].textContent);
+        parsedData.tempArr.push(parseInt(temperature[i].textContent));
+        parsedData.humidArr.push(sourceData[i].main.humidity);
     }
+
+    return parsedData;
 }
 
-function displayCurrentWeather(sourceData) {
+async function displayCurrentWeather(sourceData) {
     let status = {
         name: sourceData.name,
         temperature: Math.round(sourceData.main.temp),
@@ -94,7 +111,6 @@ function displayCurrentWeather(sourceData) {
             element.textContent = status[e];
         });
     document.querySelector('.current-weather img').setAttribute('src', `https://openweathermap.org/img/wn/${status.icon}@2x.png`)
-    return sourceData;
 }
 
 async function getDataFromServer(baseURL) {
