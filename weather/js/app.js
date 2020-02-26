@@ -68,10 +68,7 @@ async function refreshData() {
         displayCurrentWeather(current),
         displayForecastInDay(forecasts.list),
     ])
-    .then(result => {
-        console.log(result[1]);
-        createChart(result[1].timestamp, result[1].tempArr, result[1].humidArr);
-    });
+    .then(result => createChart(result[1].timestamp, result[1].tempArr, result[1].humidArr));
     // displayCurrentWeather(current)
     // displayForecastInDay(forecasts.list)
     // createChart()

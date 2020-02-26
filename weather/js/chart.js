@@ -4,7 +4,7 @@ export default async function createChart(timestamps, temperatureArr, humidityAr
     let maxHumid = parseFloat(Math.max(...humidityArr) + 5);
     if (maxHumid >= 100)
         maxHumid = 99;
-        
+
     let chart = new Chart(ctx, {
         type: 'line',
         data: {
