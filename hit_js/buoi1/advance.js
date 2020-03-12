@@ -49,4 +49,5 @@ function preSlide() {
     return;
   }
   slideContainer.style.left = currentPosition + 300 + "px";
+  autoNextSlide = setInterval(nextSlide, 1000);
 }
