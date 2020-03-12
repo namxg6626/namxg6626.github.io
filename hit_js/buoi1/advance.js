@@ -44,7 +44,9 @@ function preSlide() {
   const slideContainer = document.querySelector(".slide-container");
   const currentPosition = parseInt(slideContainer.style.left);
 
-  if (currentPosition === 0) return;
+  if (currentPosition === 0) {
+    autoNextSlide = setInterval(nextSlide, 1000);
+    return;
+  }
   slideContainer.style.left = currentPosition + 300 + "px";
-  autoNextSlide = setInterval(nextSlide, 1000);
 }
