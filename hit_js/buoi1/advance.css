@@ -24,7 +24,6 @@
 .slide-container {
     position: absolute;
     display: flex;
-    width: 1500px;
     height: 100px;
     top: 0;
     transition: 0.25s;
