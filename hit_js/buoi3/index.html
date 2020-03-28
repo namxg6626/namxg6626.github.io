@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <div class="webpage">
+        <div class="raw-info">
+            <pre>
+{
+    "id": 1,
+    "title": "task 1",
+    "description": "task 1",
+    "type": "task",
+    "priority": "high",
+    "allowFor": [
+        "back_end",
+        "front_end",
+        "function_test",
+        "performance_test"
+    ],
+    "createdBy": "Joo",
+    "assignee": "joo",
+    "estimate": "20/03/2020",
+    "state": "todo"
+}</pre>
+            <button class="btn bg--success" onclick="showUpdate(true, event)">Update</button>
+        </div>
+        <div class="update" style="display: none">
+            <div class="task-block">
+                <form name="form">
+                    <div class="left">
+                        <input id="title" name="title" value="Task 1" />
+                        <div class="form-element task-status">
+                            <div>
+                                <label for="type">Type: </label>
+                                <select name="type" id="type">
+                                    <option value="task">Task</option>
+                                    <option value="feature">Feature</option>
+                                    <option value="issue">Issue</option>
+                                    <option value="bug">Bug</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="state">State: </label>
+                                <select name="state" id="state">
+                                    <option value="todo">Todo</option>
+                                    <option value="in Processing">In Processing</option>
+                                    <option value="inreview">Inreview</option>
+                                    <option value="done">Done</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-element flex">
+                            <label for="priority">Priority: </label>
+                            <input type="radio" name="priority" id="highest" value="highest">
+                            <label for="highest">Highest</label>
+                            <input type="radio" name="priority" id="high" value="high">
+                            <label for="high">High</label>
+                            <input type="radio" name="priority" id="medium" value="medium">
+                            <label for="medium">Medium</label>
+                            <input type="radio" name="priority" id="low" value="low">
+                            <label for="low">Low</label>
+                        </div>
+                        <div class="form-element allow-for">
+                            <p>Issue allow for: </p>
+                            <input type="checkbox" name="allowFor" id="front_end" value="front_end">
+                            <label for="front_end">Front-end</label>
+                            <br>
+                            <input type="checkbox" name="allowFor" id="back_end" value="back_end">
+                            <label for="back_end">Back-end</label>
+                            <br>
+                            <input type="checkbox" name="allowFor" id="function_tester" value="function_test">
+                            <label for="function_test">Function Tester</label>
+                            <br>
+                            <input type="checkbox" name="allowFor" id="performance_test" value="performance_test">
+                            <label for="performance_test">Performance Tester</label>
+                        </div>
+                        <div class="form-element">
+                            <label for="description">Description: </label><br>
+                            <input type="text" name="description" id="description" class="description" />
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="form-element">
+                            <label for="createdBy">Created by: </label>
+                            <input type="text" name="createdBy" id="createdBy" value="lorem">
+                        </div>
+                        <div class="form-element">
+                            <label for="assignee">Assignee:</label>
+                            <input type="text" name="assgnee" id="assignee" value="lorem">
+                        </div>
+                        <div class="form-element">
+                            <label for="estimate">Estimate:</label>
+                            <input type="text" name="estimate" id="estimate" value="03/27/2020">
+                        </div>
+                    </div>
+                    <div class="update-option">
+                        <button class="btn bg--primary" onclick="save(event)">Save</button>
+                        <button class="btn bg--dark" onclick="showUpdate(false, event)">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
