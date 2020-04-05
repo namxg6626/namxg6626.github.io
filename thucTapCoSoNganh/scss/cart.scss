@@ -1,0 +1,77 @@
+@import "./variable";
+
+.item {
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid $light;
+  justify-content: space-between;
+  position: relative;
+
+  & * {
+    outline: none;
+  }
+
+  .info {
+    flex-basis: 40%;
+    margin-left: 1rem;
+
+    .name {
+      font-size: 2rem;
+      text-decoration: none;
+      color: $dark;
+      font-weight: 500;
+      margin: 1rem 0;
+      display: block;
+
+      & ~ * {
+        color: $secondary;
+      }
+    }
+  }
+  .quantity-control {
+    display: flex;
+    align-items: center;
+
+    button {
+      border: none;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      font-weight: 600;
+    }
+    input {
+      border: none;
+      width: 40px;
+      text-align: center;
+    }
+  }
+
+  .price-info {
+    flex-basis: calc(60% - 300px);
+    display: flex;
+    align-self: center;
+
+    p {
+      text-align: right;
+      flex-basis: 50%;
+    }
+  }
+
+  button[name="delete"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: red;
+    background: none;
+    border: none;
+  }
+}
+
+.error {
+  display: flex;
+  height: 500px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}

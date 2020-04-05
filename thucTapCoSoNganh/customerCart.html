@@ -12,11 +12,12 @@
     <link rel="stylesheet" href="scss/header.css">
     <link rel="stylesheet" href="./scss/contentHomepage.css">
     <link rel="stylesheet" href="./scss/footer.css">
+    <link rel="stylesheet" href="scss/cart.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <script src="https://kit.fontawesome.com/7a3d33f3e2.js" crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/7a3d33f3e2.js" crossorigin="anonymous" async="true"></script>
     <!-- import list datas -->
     <script src="./js/objects.js"></script>
-    <script src="./js/data.js"></script>
+    <!-- <script src="./js/data.js"></script> -->
 </head>
 
 <body>
@@ -69,57 +70,39 @@
             </nav>
         </div>
         <div class="cart-box" style="margin: 0 auto; max-width: 99rem;">
-            <!--use js here. code below is a pattern-->
-            <!-- <div class="item">
-                <div class="linkImage" style="background-image: url('#'); height: 150px; width: 120px; background-position: center; background-size: cover;"></div>
-                <section>
-                    <a href="#" class="name">name: </a>
-                    <p class="id">id: </p> -->
-                    <!-- delete this item -->
-                    <!-- <button name="delete" onclick="changeQuantityByIndex(event, index, -quantity)">xóa</button>
-                </section>
-                <section>
-                    <p class="price">price: $10</p>
-                    <button name="descrease" onclick="changeQuantityByIndex(event, index, -1)">bớt</button>
-                    <input type="text" class="quantity" value="0">
-                    <button name="inscrease" onclick="changeQuantityByIndex(event, index, 1)">thêm</button>
-                </section>
-            </div> -->
-            <section>
-                <p class="items-quantity">0</p>
-                <p class="total">0</p>
-            </section>
+            <!--js render in this place-->
         </div>
         <div class="footer noise">
             <div class="container">
                 <div class="footer__column">
                     <p style="font-size: 20px">LIÊN HỆ VỚI CHÚNG TÔI!</p>
                     <p><i class="fab fa-facebook-square"></i> Facebook: <a
-                        href="https://www.facebook.com/tap.quen.98">Phạm Minh Tụ</a></p>
-                        <p><i class="fas fa-phone-square-alt"></i> Điện thoại: 0511-363-8888</p>
-                        <p><i class="fas fa-map-marked-alt"></i> Địa chỉ: Đại học Công nghiệp Hà Nội (Khu A)</p>
-                    </div>
-                    <hr>
-                    <div class="footer__column">
-                        <p style="font-size: 20px;">CÁC SẢN PHẨM KHÁC</p>
-                        <p><a href="#"><i class="fas fa-mobile-alt"></i> Điện thoại di động</a></p>
-                        <p><a href="#"><i class="fas fa-laptop"></i> Máy tính xách tay</a></p>
-                        <p><a href="#"><i class="fas fa-headphones-alt"></i> Tai nghe cao cấp</a></p>
-                    </div>
+                            href="https://www.facebook.com/tap.quen.98">Phạm Minh Tụ</!--js>
+                    </p>
+                    <p><i class="fas fa-phone-square-alt"></i> Điện thoại: 0511-363-8888</p>
+                    <p><i class="fas fa-map-marked-alt"></i> Địa chỉ: Đại học Công nghiệp Hà Nội (Khu A)</p>
                 </div>
-                <div class="footer__payment-method">
-                    <p>Chúng tôi chấp nhận thanh toán qua các kênh giao dịch điện tử phổ biến hiện nay</p>
-                    <div class="container">
-                        <img src="./image/momo.png" alt="momo">
-                        <img src="./image/viettelpay.png" alt="viettelpay">
-                        <img src="./image/vtcpay.png" alt="vtcpay">
-                    </div>
-                    <hr>
-                    <i>Powered By Group 1 - KTPM1</i>
+                <hr>
+                <div class="footer__column">
+                    <p style="font-size: 20px;">CÁC SẢN PHẨM KHÁC</p>
+                    <p><a href="#"><i class="fas fa-mobile-alt"></i> Điện thoại di động</a></p>
+                    <p><a href="#"><i class="fas fa-laptop"></i> Máy tính xách tay</a></p>
+                    <p><a href="#"><i class="fas fa-headphones-alt"></i> Tai nghe cao cấp</a></p>
                 </div>
             </div>
+            <div class="footer__payment-method">
+                <p>Chúng tôi chấp nhận thanh toán qua các kênh giao dịch điện tử phổ biến hiện nay</p>
+                <div class="container">
+                    <img src="./image/momo.png" alt="momo">
+                    <img src="./image/viettelpay.png" alt="viettelpay">
+                    <img src="./image/vtcpay.png" alt="vtcpay">
+                </div>
+                <hr>
+                <i>Powered By Group 1 - KTPM1</i>
+            </div>
         </div>
-        <button name="remove-cart" onclick="removeCart(event)"
+    </div>
+    <button name="remove-cart" onclick="removeCart(event)"
         style="padding: 10px; z-index: 999; position: fixed; bottom: 40px; right: 40px; background: grey; color: white; border: none; cursor: pointer;">
         <script>
             function removeCart(e) {
@@ -127,7 +110,7 @@
                 window.alert('Cart was cleared');
                 window.location.reload();
             }
-            </script>
+        </script>
         remove-cart
     </button>
     <script src="./js/cartData.js"></script>

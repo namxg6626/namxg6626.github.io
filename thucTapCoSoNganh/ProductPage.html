@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <!-- import list datas -->
     <script src="./js/objects.js"></script>
-    <script src="./js/data.js"></script>
+    <script defer src="https://kit.fontawesome.com/7a3d33f3e2.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -41,7 +41,8 @@
                     </div>
                     <div class="header__tool-bar__cart">
                         <p> <i class="fas fa-shopping-cart"></i> Giỏ hàng <span id="items-quantity">(0 items)</span></p>
-                        <p><span id="total">0 VND</span> <a href="customerCart.html" id="show-cart" onclick="showCart(event)">Xem trước</a> </p>
+                        <p><span id="total">0 VND</span> <a href="customerCart.html" id="show-cart"
+                                onclick="showCart(event)">Xem trước</a> </p>
                     </div>
                     <div class="header__tool-bar__wish">
                         <p><i class="fas fa-star"></i></p>
@@ -67,8 +68,9 @@
         </div>
         <div class="content">
             <div class="content__detail">
-                <div class="detail__image" style="background-image: url('http://gomhang.vn/images/stories/virtuemart/product/ava2394.jpg')">
-    
+                <div class="detail__image"
+                    style="background-image: url('http://gomhang.vn/images/stories/virtuemart/product/ava2394.jpg')">
+
                 </div>
                 <div class="detail__infor">
                     <section>
@@ -108,7 +110,8 @@
             <div class="container">
                 <div class="footer__column">
                     <p style="font-size: 20px">LIÊN HỆ VỚI CHÚNG TÔI!</p>
-                    <p><i class="fab fa-facebook-square"></i> Facebook: <a href="https://www.facebook.com/tap.quen.98">Phạm
+                    <p><i class="fab fa-facebook-square"></i> Facebook: <a
+                            href="https://www.facebook.com/tap.quen.98">Phạm
                             Minh Tụ</a></p>
                     <p><i class="fas fa-phone-square-alt"></i> Điện thoại: 0511-363-8888</p>
                     <p><i class="fas fa-map-marked-alt"></i> Địa chỉ: Đại học Công nghiệp Hà Nội (Khu A)</p>
@@ -133,7 +136,8 @@
             </div>
         </div>
     </div>
-    <button name="remove-cart" onclick="removeCart(event)" style="padding: 10px; z-index: 999; position: fixed; bottom: 40px; right: 40px; background: grey; color: white; border: none; cursor: pointer;">
+    <button name="remove-cart" onclick="removeCart(event)"
+        style="padding: 10px; z-index: 999; position: fixed; bottom: 40px; right: 40px; background: grey; color: white; border: none; cursor: pointer;">
         <script>
             function removeCart(e) {
                 window.localStorage.removeItem('cart');
@@ -146,7 +150,7 @@
     <!-- <script src="js/appHomepage.js"></script> -->
     <script src="./js/cartData.js"></script>
     <script src="./js/appProductPage.js"></script>
-    <script src="https://kit.fontawesome.com/7a3d33f3e2.js" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

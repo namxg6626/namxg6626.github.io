@@ -18,7 +18,7 @@ html * {
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -90,7 +90,10 @@ body {
 .header__tool-bar__logo {
   width: 11rem;
   height: 6rem;
-  background-color: blue;
+  background-image: url("../image/logo.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .header__tool-bar__search {

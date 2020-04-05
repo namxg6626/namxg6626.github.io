@@ -1,38 +1,55 @@
-let productDetailArray = document.querySelectorAll(".content__product__table__list__element");
+let productDetailArray = document.querySelectorAll(
+  ".content__product__table__list__element"
+);
+
+let dataJson = [];
+initPage();
+
+async function initPage() {
+  const response = await fetch("http://localhost:4000/shopnguyenxa/");
+  dataJson = await response.json();
+
+  displayPage(1);
+  initPageSelection();
+}
 
 // create page selection
-let selectPageRow = document.querySelectorAll('.content__product__table__list .container')[3];
-selectPageRow.style.justifyContent = "start";
-let numberOfPage = Math.ceil(listExtensionsData.length / 12);
-for (let i = 1; i <= numberOfPage; i++) {
-    selectPageRow.innerHTML += "<div class=\"select-page\" onclick=\"switchTab(event)\">" + i + "<div>"
+function initPageSelection() {
+  let selectPageRow = document.querySelectorAll(
+    ".content__product__table__list .container"
+  )[3];
+  selectPageRow.style.justifyContent = "start";
+  let numberOfPage = Math.ceil(dataJson.length / 12);
+  for (let i = 1; i <= numberOfPage; i++) {
+    selectPageRow.innerHTML += `<div class="select-page" onclick="switchTab(event)">${i}<div>`;
+  }
+  selectPageRow.querySelector(".select-page").classList.add("selected");
 }
-selectPageRow.querySelector('.select-page').classList.add('selected');
 // end
 
-
 function displayPage(pageNumber) {
-    for (let i = 0; i < productDetailArray.length; i++) {
-        productDetailArray[i].querySelector('.image-product > div').style.backgroundImage = "url(" + listExtensionsData[(pageNumber - 1) * 12 + i].get("linkImage") + ")";
-        let tmp = productDetailArray[i].querySelectorAll('p');
-        let link = tmp[0].querySelector('a');
-        link.textContent = listExtensionsData[(pageNumber - 1) * 12 + i].get("name");
-        link.setAttribute("href","ProductPage.html#" + ((pageNumber - 1) * 12 + i));
-        tmp[1].textContent = listExtensionsData[(pageNumber - 1) * 12 + i].get("price") + "K VNĐ";
-        tmp[2].textContent = listExtensionsData[(pageNumber - 1) * 12 + i].get("id");
-    }
+  for (let i = 0; i < productDetailArray.length; i++) {
+    productDetailArray[i].querySelector(
+      ".image-product > div"
+    ).style.backgroundImage =
+      "url(" + dataJson[(pageNumber - 1) * 12 + i].linkImage + ")";
+
+    let tmp = productDetailArray[i].querySelectorAll("p");
+    let link = tmp[0].querySelector("a");
+    link.textContent = dataJson[(pageNumber - 1) * 12 + i].name;
+    link.setAttribute(
+      "href",
+      "ProductPage.html#" + ((pageNumber - 1) * 12 + i + 1)
+    );
+    tmp[1].textContent = dataJson[(pageNumber - 1) * 12 + i].price + "K VNĐ";
+    tmp[2].textContent = dataJson[(pageNumber - 1) * 12 + i].id;
+  }
 }
-displayPage(1);
 
-
-let selectNumberArray = selectPageRow.querySelectorAll('.select-page');
 function switchTab(evt) {
-    for (let element of selectNumberArray)
-        element.classList.remove('selected');
-    evt.currentTarget.classList.add('selected');
-    displayPage(parseInt(evt.currentTarget.textContent));
-}
-
-function showCart(e) {
-    // document.documentElement.style.setProperty("--toggle-cart", `""`);
+  const prevSelection = document.querySelector(".select-page.selected");
+  prevSelection.classList.remove("selected");
+  const { target } = evt;
+  target.classList.add("selected");
+  displayPage(parseInt(target.textContent));
 }

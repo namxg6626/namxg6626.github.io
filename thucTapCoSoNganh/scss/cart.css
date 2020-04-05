@@ -1,0 +1,98 @@
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e8e8e9;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.item * {
+  outline: none;
+}
+
+.item .info {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  margin-left: 1rem;
+}
+
+.item .info .name {
+  font-size: 2rem;
+  text-decoration: none;
+  color: #343a40;
+  font-weight: 500;
+  margin: 1rem 0;
+  display: block;
+}
+
+.item .info .name ~ * {
+  color: #6c757d;
+}
+
+.item .quantity-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.item .quantity-control button {
+  border: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.item .quantity-control input {
+  border: none;
+  width: 40px;
+  text-align: center;
+}
+
+.item .price-info {
+  -ms-flex-preferred-size: calc(60% - 300px);
+      flex-basis: calc(60% - 300px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.item .price-info p {
+  text-align: right;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.item button[name="delete"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: red;
+  background: none;
+  border: none;
+}
+
+.error {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 500px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=cart.css.map */
