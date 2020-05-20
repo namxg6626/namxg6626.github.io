@@ -1,17 +1,9 @@
 class Product {
   constructor(id, name, price, index = 0) {
-    this._id = id;
-    this._name = name;
-    this._price = price;
-    this._index = index;
-  }
-  get(property) {
-    property = "_" + property;
-    return this[property];
-  }
-  set(property, value) {
-    property = "_" + property;
-    this[property] = value;
+    this.id = id;
+    this.name = name;
+    this.price = price;
+    this.index = index;
   }
 }
 
@@ -28,18 +20,18 @@ class SmartphoneStuff extends Product {
     index
   ) {
     super(id, name, price, index);
-    this._material = material;
-    this._brand = brand;
-    this._mfgDate = mfgDate;
-    this._warranty = warranty;
-    this._linkImage = linkImage;
+    this.material = material;
+    this.brand = brand;
+    this.mfgDate = mfgDate;
+    this.warranty = warranty;
+    this.linkImage = linkImage;
   }
   checkWarranty() {
     if (
-      this._mfgDate == null ||
-      this._warranty == null ||
-      this._mfgDate == "null" ||
-      this._warranty == "null"
+      this.mfgDate == null ||
+      this.warranty == null ||
+      this.mfgDate == "null" ||
+      this.warranty == "null"
     ) {
       return false;
     }
@@ -53,15 +45,15 @@ class SmartphoneStuff extends Product {
     let currentD = dateArray[2],
       currentM = dateArray[1],
       currentY = dateArray[0];
-    let mfgDateArray = this._mfgDate
+    let mfgDateArray = this.mfgDate
       .split("-")
       .map((element) => parseInt(element));
     let mfgD = mfgDateArray[0],
       mfgM = mfgDateArray[1],
       mfgY = mfgDateArray[2];
 
-    let expM = (this._warranty % 12) + mfgM;
-    let expY = Math.floor(this._warranty / 12) + mfgY;
+    let expM = (this.warranty % 12) + mfgM;
+    let expY = Math.floor(this.warranty / 12) + mfgY;
     if (expM > 12) {
       expM = expM - 12;
       expY += 1;
@@ -98,7 +90,7 @@ class Extension extends SmartphoneStuff {
       linkImage,
       index
     );
-    this._compatibility = compatibility;
+    this.compatibility = compatibility;
   }
 }
 
@@ -116,7 +108,7 @@ class Cart {
       total += parseFloat(this.items[i].price);
     return total;
   }
-  groupByName() {
+  groupById() {
     let idsList = [];
     let result = [];
     let quantity = 0;
@@ -134,13 +126,4 @@ class Cart {
     }
     return result;
   }
-  // groupById() {
-  //   let temp = myCart.items;
-  //   temp.sort((a, b) => {
-  //     if (a.id < b.id) return -1;
-  //     if (a.id > b.id) return 1;
-  //     else return 0;
-  //   });
-  //   return temp;
-  // }
 }

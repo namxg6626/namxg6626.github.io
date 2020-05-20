@@ -162,7 +162,7 @@ body {
   border: 1px solid #ccc;
   bottom: calc(100% + 10px);
   right: 0;
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .forecast-in-day .switch-button::before {
@@ -178,12 +178,17 @@ body {
   left: 0;
 }
 
-.forecast-in-day #toggle-chart:checked ~ .switch-button::before {
+.forecast-in-day input[name="toggle-chart"]:checked ~ .switch-button::before {
   left: calc(100% - 20px);
+  background: white;
 }
 
 .forecast-in-day input[name="toggle-chart"]:checked ~ canvas {
   opacity: 100;
+}
+
+.forecast-in-day input[name="toggle-chart"]:checked ~ .switch-button {
+  background: #666;
 }
 
 .forecast-in-day::before {

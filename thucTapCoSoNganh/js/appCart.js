@@ -1,4 +1,4 @@
-let groupByName = myCart.groupByName();
+let groupById = myCart.groupById();
 
 // display
 updateHeaderCart();
@@ -6,8 +6,8 @@ initCartInterface();
 
 function initCartInterface() {
   let cartBox = document.querySelector(".cart-box");
-  if (groupByName.length) {
-    for (let element of groupByName) {
+  if (groupById.length) {
+    for (let element of groupById) {
       const {
         item: { linkImage, name, brand, compatibility, id, price },
         quantity,

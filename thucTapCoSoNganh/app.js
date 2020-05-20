@@ -14,8 +14,8 @@ const con = mysql.createConnection({
 app.listen(4000, () => console.log("listening on port 4000"));
 app.use(cosr()); // enable cross-origin sharing resources
 
-const _SELECT_ALL = "SELECT * FROM phukien";
-let _SELECT_BY_ID = "SELECT * FROM phukien WHERE id = ";
+const _SELECT_ALL = "SELECT * FROM product";
+let _SELECT_BY_ID = "SELECT * FROM product WHERE id = ";
 
 app.get(`/shopnguyenxa/`, (req, res) => {
   const id = req.param("id");

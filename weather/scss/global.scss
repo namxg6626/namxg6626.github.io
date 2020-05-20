@@ -100,7 +100,7 @@ body {
   width: 100%;
   position: relative;
   margin-top: 40px;
-
+  
   .column {
     * {
       text-align: center;
@@ -130,8 +130,7 @@ body {
     border: 1px solid #ccc;
     bottom: calc(100% + 10px);
     right: 0;
-    border-radius: 15px;
-
+    border-radius: 20px;
   }
   .switch-button::before {
     content: "";
@@ -144,11 +143,16 @@ body {
     position: absolute;
     left: 0;
   }
-  #toggle-chart:checked ~ .switch-button::before{
+  input[name="toggle-chart"]:checked ~ .switch-button::before{
     left: calc(100% - 20px);
+    background: white;
   }
   input[name="toggle-chart"]:checked ~ canvas {
     opacity: 100;
+  }
+  input[name="toggle-chart"]:checked ~ .switch-button {
+    // background: rgb(41, 107, 41);
+    background: #666;
   }
 }
 .forecast-in-day::before {

@@ -2,8 +2,8 @@ export default async function createChart(timestamps, temperatureArr, humidityAr
     let ctx = document.getElementById('myChart').getContext('2d');
     let maxTemp = parseFloat(Math.max(...temperatureArr) + 5);
     let maxHumid = parseFloat(Math.max(...humidityArr) + 5);
-    if (maxHumid >= 100)
-        maxHumid = 99;
+    if (maxHumid > 100)
+        maxHumid = 100;
 
     let chart = new Chart(ctx, {
         type: 'line',
@@ -17,7 +17,7 @@ export default async function createChart(timestamps, temperatureArr, humidityAr
                     fill: false,
                     borderColor: 'rgba(255, 99, 132, 1)',
                     pointBackgroundColor: 'rgba(255, 99, 132, 1)',
-                    pointBorderWidth: 3,
+                    pointBorderWidth: 5,
                     borderWidth: 1,
                 },
                 {
@@ -27,7 +27,7 @@ export default async function createChart(timestamps, temperatureArr, humidityAr
                     fill: false,
                     borderColor: 'rgba(38, 160, 252, 1)',
                     pointBackgroundColor: 'rgba(38, 160, 252, 1)',
-                    pointBorderWidth: 3,
+                    pointBorderWidth: 5,
                     borderWidth: 1,
                 },
             ]
@@ -52,7 +52,11 @@ export default async function createChart(timestamps, temperatureArr, humidityAr
                         ticks: {
                             suggestedMax: maxHumid,
                             beginAtZero: true,
-                            callback: (value, index, values) => value + '%',
+                            callback: (value, index, values) => {
+                                if (value === 100) 
+                                    value = 99;
+                                return value + '%'
+                            },
                         },
                     }
                 ]
