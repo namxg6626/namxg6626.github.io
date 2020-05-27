@@ -28,18 +28,23 @@ class Modal extends Component {
     });
   };
 
+  _onClick = () => {
+    this.props.onSubmit(this.state.text);
+    this.setState({ text: "" });
+  };
+
   render() {
     return (
-      <div className="modal">
+      <div className="message-typer">
         <input
           type="text"
-          placeholder="Enter your name..."
+          name="input-box"
+          id="input-box"
           value={this.state.text}
           onChange={this._onChange}
+          placeholder={this.props.placeholder}
         />
-        <button onClick={() => this.props.onSubmit(this.state.text)}>
-          submit
-        </button>
+        <button onClick={this._onClick}>Send</button>
       </div>
     );
   }
@@ -52,23 +57,22 @@ export default class App extends Component {
     this.state = {
       messages: [],
       currentUser: "",
-      text: "",
       isEnteringUsername: true,
     };
   }
 
   componentDidMount() {
     window.addEventListener("keyup", (e) => {
-      if (e.key.toLowerCase() === "enter") this._onClick();
+      if (e.key.toLowerCase() === "enter") this.sendMessage();
     });
   }
 
-  _onClick = () => {
-    if (this.state.text)
+  sendMessage = (message) => {
+    if (message)
       this.setState((prevState) => ({
         messages: [
           ...prevState.messages,
-          { message: prevState.text, name: prevState.currentUser },
+          { message: message, name: prevState.currentUser },
         ],
         text: "",
       }));
@@ -80,9 +84,8 @@ export default class App extends Component {
     });
   };
 
-  enterUsername = (username) => {
+  setUsername = (username) => {
     this.setState((prevState) => ({
-      ...this.state,
       isEnteringUsername: false,
       currentUser: username,
     }));
@@ -92,7 +95,7 @@ export default class App extends Component {
     return (
       <div className="app">
         {this.state.isEnteringUsername ? (
-          <Modal onSubmit={this.enterUsername} />
+          <Modal onSubmit={this.setUsername} placeholder="Nhập tên..." />
         ) : (
           <div className="chat-window">
             <ul className="messages">
@@ -104,17 +107,7 @@ export default class App extends Component {
                 />
               ))}
             </ul>
-            <div className="message-typer">
-              <input
-                type="text"
-                name="input-box"
-                id="input-box"
-                value={this.state.text}
-                onChange={this._onChange}
-                placeholder="Type your message here..."
-              />
-              <button onClick={this._onClick}>Send</button>
-            </div>
+            <Modal onSubmit={this.sendMessage} placeholder="Nhập tin nhắn..." />
           </div>
         )}
       </div>
