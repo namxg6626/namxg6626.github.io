@@ -19,12 +19,12 @@ body {
 }
 
 .menu {
-  padding: 20px;
+  padding: 20px 0;
   background-color: lightblue;
 }
 
 .banner {
-  padding: 50px;
+  padding: 50px 0;
   background-color: #17a2b8;
   margin: 5px 0;
 }
@@ -35,7 +35,7 @@ body {
 }
 
 .content__header {
-  padding: 40px;
+  padding: 40px 0;
   background-color: brown;
 }
 
@@ -45,17 +45,17 @@ body {
 
 .content__left {
   background-color: #dc3545;
-  padding: 50px;
-  flex-basis: 80%;
+  padding: 50px 0;
+  flex-basis: 70%;
 }
 
 .content__right {
   background-color: #007bff;
-  padding: 50px;
-  flex-basis: 20%;
+  padding: 50px 0;
+  flex-basis: 30%;
 }
 
 .footer {
-  padding: 10px;
+  padding: 10px 0;
   background-color: #333;
 }
