@@ -13,15 +13,15 @@ let timeBaseOnIP = {};
 let isUserSearch = userSearch();
 
 refreshData()
-  .then(resolve => {
-    document.querySelectorAll("svg").forEach(loader => {
+  .then((resolve) => {
+    document.querySelectorAll("svg").forEach((loader) => {
       loader.style.display = "none";
     });
-    document.querySelectorAll("img").forEach(icon => {
+    document.querySelectorAll("img").forEach((icon) => {
       icon.style.display = "block";
     });
   })
-  .catch(error => {
+  .catch((error) => {
     if (!isUserSearch) alert("Có lỗi xảy ra khi tải trang");
     console.log(error);
     returnDefaultPage();
@@ -34,8 +34,8 @@ function userSearch() {
     cityName = url.split("=")[1].replace(/[+]/g, " ");
     refreshAPI(cityName);
     getDataFromServer(_CURRENT_WEATHER)
-      .then(result => refreshData())
-      .catch(error => {
+      .then((result) => refreshData())
+      .catch((error) => {
         alert("Tên tỉnh không tồn tại");
         returnDefaultPage();
       });
@@ -48,8 +48,8 @@ async function refreshData() {
   [current, forecasts, timeBaseOnIP] = await Promise.all([
     getDataFromServer(_CURRENT_WEATHER),
     getDataFromServer(_FORECAST_5DAYS_3HOURS),
-    getDataFromServer(_TIME_BASE_ON_IP)
-  ]).catch(error => console.log(error));
+    getDataFromServer(_TIME_BASE_ON_IP),
+  ]).catch((error) => console.log(error));
 
   let GMTInUnixTime = timeBaseOnIP.unixtime - timeBaseOnIP.raw_offset;
   let weekday;
@@ -66,8 +66,8 @@ async function refreshData() {
   current.weekday = getWeekday(weekday);
   await Promise.all([
     displayCurrentWeather(current),
-    displayForecastInDay(forecasts.list)
-  ]).then(result =>
+    displayForecastInDay(forecasts.list),
+  ]).then((result) =>
     createChart(result[1].timestamp, result[1].tempArr, result[1].humidArr)
   );
   // displayCurrentWeather(current)
@@ -83,7 +83,7 @@ async function displayForecastInDay(sourceData) {
   let parsedData = {
     timestamp: [],
     tempArr: [],
-    humidArr: []
+    humidArr: [],
   };
 
   for (let i = 0; i < time.length; i++) {
@@ -110,11 +110,11 @@ async function displayCurrentWeather(sourceData) {
     weather:
       sourceData.weather[0].description.charAt(0).toUpperCase() +
       sourceData.weather[0].description.slice(1),
-    icon: sourceData.weather[0].icon
+    icon: sourceData.weather[0].icon,
   };
 
   for (let e in status)
-    document.querySelectorAll(".current-weather ." + e).forEach(element => {
+    document.querySelectorAll(".current-weather ." + e).forEach((element) => {
       element.textContent = status[e];
     });
   document
@@ -128,6 +128,9 @@ async function displayCurrentWeather(sourceData) {
 async function getDataFromServer(baseURL) {
   let result = await fetch(baseURL);
   let data = await result.json();
+  console.log("====================================");
+  console.log(data);
+  console.log("====================================");
   return data;
 }
 
