@@ -1,0 +1,17 @@
+.menu {
+  background-color: brown;
+  display: flex;
+  padding: 0 300px;
+}
+
+.date,
+.signup,
+.login {
+  color: white;
+  padding: 20px;
+  /* background-color: black; */
+}
+
+.date {
+  flex: 1;
+}

@@ -1,0 +1,121 @@
+/* 
+  .menu {
+    display: flex;
+    list-style: none;
+    background-color: mediumspringgreen;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+  }
+  li {
+    width: 100px;
+    text-align: center;
+  }
+  .menu li:hover .sub-menu {
+    background-color: lightblue;
+    display: block;
+  }
+  li:hover {
+    background-color: mediumvioletred;
+    z-index: 1000;
+  }
+  .sub-menu {
+    list-style: none;
+    display: none;
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    height: 1000px;
+  }
+  .person {
+    width: 30%;
+    background-color: olivedrab;
+    border-radius: 10px 10px 0px 0px;
+    padding-bottom: 15px;
+    box-sizing: border-box;
+  }
+  img {
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+  h2 {
+    text-align: center;
+    color: white;
+  }
+  .cha {
+    width: 200px;
+    height: 200px;
+    background-color: violet;
+    position: relative;
+    top: 100px;
+    left: 100px;
+  }
+  .con {
+    width: 50px;
+    height: 50px;
+    background-color: teal;
+    position: absolute;
+    bottom: calc(50% - 25px);
+    right: calc(50% - 25px);
+  }
+  .con2 {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background-color: tomato;
+    right: -80px;
+  }
+  .a {
+    font-size: 50px;
+    color: darkred;
+  }
+   */
+
+.menu {
+  display: flex;
+  list-style: none;
+  background-color: cadetblue;
+  padding: 0;
+  position: sticky;
+  top: 0;
+}
+
+li {
+  /* width: 300px; */
+  padding: 50px 30px;
+  color: white;
+  font-size: 48px;
+  position: relative;
+}
+
+.menu li:hover {
+  background-color: yellow;
+}
+li:hover .sub_menu {
+  background-color: red;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+.sub_menu {
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+.content {
+  height: 10000px;
+  background-color: violet;
+}
+* {
+  margin: 0;
+}
