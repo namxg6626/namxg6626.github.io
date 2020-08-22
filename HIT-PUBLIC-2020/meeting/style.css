@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  /** Cộng dồn padding mà không làm thay đổi kích thước của block */
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Karma", sans-serif;
+}
+
+.webpage {
+  max-width: 1200px;
+  padding: 0 16px;
+  margin: 0 auto;
+  /* background-color: antiquewhite;
+  height: 1000px; */
+}
+
+.header {
+  position: sticky;
+  top: 0;
+
+  background-color: white;
+}
+
+.main {
+  margin-top: 2rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  list-style: none;
+}
+
+.menu > .menu__item {
+  font-size: 24px;
+  padding: 16px 0;
+}
+
+.main {
+}
+
+.food-container {
+  display: flex;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.food {
+  flex-basis: 24%;
+  margin-bottom: 1rem;
+  /* background-color: aquamarine; */
+}
+
+.food > img {
+  width: 100%;
+}
+
+.food__title {
+  font-size: 24px;
+  font-family: "Karma", serif;
+  text-align: center;
+}
+
+.food__description {
+  font-family: "Karma", serif;
+  text-align: center;
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.pagination__page {
+  padding: 1rem;
+  /* margin: 0 4px; */
+}
+
+.pagination__page:hover,
+.pagination__selected {
+  background-color: black;
+  color: white;
+}
+
+.food-man {
+  padding: 3rem 0;
+  margin-bottom: 1rem;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.food-man > * {
+  margin-bottom: 0.5rem;
+}
+
+.food-man__title {
+  font-size: 24px;
+  margin-bottom: 3rem;
+  font-family: "Karma", sans-serif;
+}
+
+.food-man__name {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.food-man__caption {
+  font-style: italic;
+}
+
+.food-man__description {
+  font-family: "Karma", sans-serif;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 3rem 0;
+}
+
+.footer > * {
+  flex-basis: 33%;
+  /* background-color: aqua;
+  height: 200px; */
+}
+
+.footer__col > * {
+  margin-bottom: 1rem;
+}
+
+.footer__title {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+
+p > a {
+  text-decoration-color: #eee;
+  color: #333;
+}
+
+.post__item {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+}
+
+.post__item > img {
+  max-width: 50px;
+  margin-right: 1rem;
+}
+
+.post__item:first-child {
+  border-bottom: 1px solid #eee;
+}
+
+.post__item:hover {
+  background-color: rgb(197, 197, 197);
+}
+
+.tag-container {
+}
+
+span.tag {
+  display: inline-block;
+  padding: 4px;
+  margin: 4px;
+
+  background-color: #616161;
+
+  color: white;
+}
+
+.tag--selected {
+  display: inline-block;
+  padding: 4px;
+  margin: 4px;
+
+  background-color: black;
+
+  color: white;
+}
